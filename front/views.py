@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
 
 def index(request):
-    return HttpResponse("matromatic the best choice for your industry")
+    template = loader.get_template('font/base.html')
+    return HttpResponse(template.render(request=request))
