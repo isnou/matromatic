@@ -11641,7 +11641,6 @@ body {
 
 .news-section {
   padding: 10rem 0;
-  background: linear-gradient(to bottom, #000 0%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0.8) 100%);
 }
 .news-section .featured-text {
   padding: 2rem;
