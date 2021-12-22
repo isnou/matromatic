@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Profil(models.Model):
+class Profile(models.Model):
     name = models.CharField(max_length=200)
     about = models.CharField(max_length=50)
     projects = models.CharField(max_length=50)
