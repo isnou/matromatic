@@ -42,9 +42,9 @@
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
-                        <h1 class="mx-auto my-0">MATRO matic</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">MATRO matic est une entreprise Algérienne spécialisée dans l'étude et la réalisation de machine industrielle et semi-industrielle .</h2>
-                        <a class="btn btn-primary" href="#about">Decouvrir</a>
+                        <h1 class="mx-auto my-0">{{ profile.intro_big_text }}</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">{{ profile.intro_small_text }}</h2>
+                        <a class="btn btn-primary" href="#about">{{ profile.intro_button }}</a>
                     </div>
                 </div>
             </div>
@@ -54,11 +54,10 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="text-white mb-4">Nos champs de competences </h2>
-                        <p class="text-white-50">
-                            En dehors de notre immense parc machine nos ingénieurs sont experts de conception mécanique électrique et informatique
-                            <a href=" ">page precedente.</a>
-                            hhhhhhhh.
+                        <h2 class="text-white mb-4">{{ profile.about_title }}</h2>
+                        <p class="text-white-50">{{ profile.about_text }}
+                            <a href="{{ profile.about_link }}">{{ profile.about_link }}</a>
+                            {{ profile.about_disc }}
                         </p>
                     </div>
                 </div>
