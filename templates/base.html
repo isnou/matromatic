@@ -24,11 +24,12 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
+                <link rel="icon" type="image/x-icon" href="{% static 'front/assets/favicon.ico' %}" />
                 <a class="navbar-brand" href="#page-top">MATRO matic</a>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#about">A propos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#activities">Activités</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
                     </ul>
                 </div>
@@ -62,12 +63,18 @@
                 <img class="img-fluid" src="{% static 'front/assets/img/gears.png' %}" alt="..." />
             </div>
         </section>
+
+        <!-- News-->
+
+
         <!-- Projects-->
-        <section class="projects-section bg-light" id="projects">
+        <section class="projects-section bg-light" id="activities">
             <div class="container px-4 px-lg-5">
                 <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{% static 'front/assets/img/bg-masthead.jpg' %}" alt="..." /></div>
+                    <div class="col-xl-8 col-lg-7">
+                        <img class="img-fluid mb-3 mb-lg-0" src="{% static 'front/assets/img/bg-masthead.jpg' %}" alt="..." />
+                    </div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4>Hades</h4>
@@ -77,7 +84,9 @@
                 </div>
                 <!-- Project One Row-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="{% static 'front/assets/img/demo-image-01.jpg' %}" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid" src="{% static 'front/assets/img/demo-image-01.jpg' %}" alt="..." />
+                    </div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -92,10 +101,9 @@
                 </div>
                 <!-- Project Two Row-->
                 <div class="row gx-0 justify-content-center">
-
-
-
-                    <div class="col-lg-6"><img class="img-fluid" src="{% static 'front/assets/img/demo-image-02.jpg' %}" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid" src="{% static 'front/assets/img/demo-image-02.jpg' %}" alt="..." />
+                    </div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -110,6 +118,10 @@
                 </div>
             </div>
         </section>
+        <!-- News-->
+
+
+
         <!-- Signup-->
         <section class="signup-section" id="signup">
             <div class="container px-4 px-lg-5">
@@ -194,7 +206,6 @@
                     <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                     <a class="mx-2" href="#!"><i class="fab fa-youtube"></i></a>
                     <a class="mx-2" href="#!"><i class="fa fa-key"></i></a>
-
                 </div>
             </div>
         </section>
