@@ -3,10 +3,10 @@ from django.http import HttpResponse
 from django.template import loader
 
 from django.http import Http404
-from .models import Profile
+from .models import Profile, Manager
 
 def index(request):
-    profile_id = 1
+    profile_id = Manager.profile.id
     try:
         profile = Profile.objects.get(pk=profile_id)
     except Profile.DoesNotExist:
