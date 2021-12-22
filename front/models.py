@@ -2,9 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
+# user = models.OneToOneField(User, on_delete=models.CASCADE)
 
 class Profile(models.Model):
-    name = models.CharField(max_length=200)
     about = models.CharField(max_length=50)
     projects = models.CharField(max_length=50)
     news = models.CharField(max_length=50)
@@ -17,6 +17,5 @@ class Profile(models.Model):
     about_link = models.CharField(max_length=150)
     about_disc = models.CharField(max_length=100)
 
-class Manager(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    profile = models.OneToOneField(Profile, on_delete=models.CASCADE, default=1)
+class SiteManager(models.Model):
+    profile_id = models.IntegerField(default=1)
