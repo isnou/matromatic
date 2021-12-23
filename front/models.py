@@ -50,7 +50,7 @@ class Profile(models.Model):
     contact_link_area = models.CharField(max_length=200, blank=True)
     contact_button = models.CharField(max_length=50, blank=True)
     address_title = models.CharField(max_length=50, blank=True)
-    address = models.CharField(max_length=50, blank=True)
+    address = models.CharField(max_length=500, blank=True)
     email_title = models.CharField(max_length=50, blank=True)
     email = models.EmailField(max_length=300, blank=True)
     phone_title = models.CharField(max_length=50, blank=True)
