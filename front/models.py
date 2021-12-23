@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 # user = models.OneToOneField(User, on_delete=models.CASCADE)
 
 class Profile(models.Model):
-    profile_name = models.CharField(max_length=50)
+    profile_name = models.CharField(max_length=50, default='blank')
     about = models.CharField(max_length=50)
     projects = models.CharField(max_length=50)
     news = models.CharField(max_length=50)
