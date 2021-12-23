@@ -39,7 +39,7 @@ class Project(models.Model):
 class News(models.Model):
     news_name = models.CharField(max_length=50)
     description = models.TextField(max_length=200, default='blank')
-    photo = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100)
+    photo = models.ImageField(upload_to='news/%Y/%m/%d', height_field=None, width_field=None, max_length=100)
 
     class Meta:
         verbose_name = "news"
