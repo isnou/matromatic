@@ -17,4 +17,4 @@ class Profile(models.Model):
     about_link = models.CharField(max_length=150)
     about_disc = models.CharField(max_length=100)
 
-class SiteManager(models.Model):
+# class SiteManager(models.Model):
