@@ -44,7 +44,7 @@ class Profile(models.Model):
     about_text = models.TextField(max_length=500, blank=True)
     about_link = models.CharField(max_length=150)
     about_disc = models.CharField(max_length=100)
-    news_id = models.ManyToManyField(News, blank=True)
+    news_id = models.OneToManyField(News, blank=True)
     projects_id = models.ManyToManyField(Project, blank=True)
     contact_title = models.CharField(max_length=100, blank=True)
     contact_link_area = models.CharField(max_length=200, blank=True)
