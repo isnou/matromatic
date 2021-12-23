@@ -54,7 +54,7 @@ class Profile(models.Model):
     email_title = models.CharField(max_length=50, default='blank')
     email = models.EmailField(max_length=300)
     phone_title = models.CharField(max_length=50, default='blank')
-    phone = models.PhoneNumberField(blank=True)
+    phone = PhoneNumberField(blank=True)
 
     class Meta:
         verbose_name = "profile"
