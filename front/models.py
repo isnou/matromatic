@@ -27,7 +27,7 @@ class Profile(models.Model):
 class Project(models.Model):
     project_name = models.CharField(max_length=50)
     description = models.TextField(max_length=200, default='blank')
-    left = models.BoolField()
+    left = models.BooleanField()
     photo = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100)
 
     class Meta:
