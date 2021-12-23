@@ -108,6 +108,12 @@
 
         <!-- News-->
 
+        <ul>
+            {% for news in profile.news_ids %}
+            <li>{{ news.news_name }}</li>
+            {% endfor %}
+        </ul>
+
         <section class="news-section" id="news" style="background-color:rgb(200, 200, 200)">
             <div class="container px-4 px-lg-5">
                 <!-- Featured Project Row-->
