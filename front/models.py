@@ -43,7 +43,7 @@ class Profile(models.Model):
     about_text = models.TextField(max_length=500, default='blank')
     about_link = models.CharField(max_length=150)
     about_disc = models.CharField(max_length=100)
-    news_id = models.OneToOneField(News, on_delete=models.CASCADE, default=1)
+    news_id = models.OneToOneField(News, on_delete=models.CASCADE, default='1')
 
     class Meta:
         verbose_name = "profile"
