@@ -31,7 +31,7 @@ class News(models.Model):
         return self.news_name
 
 
-class SiteProfile(models.Model):
+class Profile(models.Model):
     profile_name = models.CharField(max_length=50, blank=True)
     about = models.CharField(max_length=50)
     projects = models.CharField(max_length=50)
@@ -45,7 +45,6 @@ class SiteProfile(models.Model):
     about_link = models.CharField(max_length=150)
     about_disc = models.CharField(max_length=100)
     news_id = models.OneToOneField(News, on_delete=models.CASCADE, blank=True)
-    projects_id = models.OneToOneField(Project, on_delete=models.CASCADE, blank=True)
     contact_title = models.CharField(max_length=100, blank=True)
     contact_link_area = models.CharField(max_length=200, blank=True)
     contact_button = models.CharField(max_length=50, blank=True)
@@ -57,7 +56,7 @@ class SiteProfile(models.Model):
     phone = PhoneNumberField(blank=True)
 
     class Meta:
-        verbose_name = "site profile"
+        verbose_name = "profile"
 
     def __str__(self):
         return self.profile_name

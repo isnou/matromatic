@@ -3,11 +3,11 @@ from django.http import HttpResponse
 from django.template import loader
 
 from django.http import Http404
-from .models import SiteProfile# , SiteManager
+from .models import Profile# , SiteManager
 
 def index(request):
     try:
-        profile = SiteProfile.objects.get(pk=1)
+        profile = Profile.objects.get(pk=1)
     except Profile.DoesNotExist:
         raise Http404("Profile does not exist")
 
