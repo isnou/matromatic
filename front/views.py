@@ -12,3 +12,19 @@ def index(request):
         raise Http404("Profile does not exist")
 
     return render(request, 'base.html', {'profile': profile})
+
+def news(request):
+    try:
+        news = Profile.news_id.objects.all()
+    except Profile.DoesNotExist:
+        raise Http404("Profile does not exist")
+
+    return render(request, 'news.html', {'news': news})
+
+def projects(request):
+    try:
+        project = Profile.projects_id.objects.all()
+    except Profile.DoesNotExist:
+        raise Http404("Profile does not exist")
+
+    return render(request, 'project.html', {'project': project})
