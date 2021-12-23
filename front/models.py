@@ -31,7 +31,7 @@ class News(models.Model):
         return self.news_name
 
 
-class Profile(models.Model):
+class SiteProfile(models.Model):
     profile_name = models.CharField(max_length=50, blank=True)
     about = models.CharField(max_length=50)
     projects = models.CharField(max_length=50)
@@ -57,7 +57,7 @@ class Profile(models.Model):
     phone = PhoneNumberField(blank=True)
 
     class Meta:
-        verbose_name = "profile"
+        verbose_name = "site profile"
 
     def __str__(self):
         return self.profile_name
