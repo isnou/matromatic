@@ -109,8 +109,9 @@
         <!-- News-->
 
         <ul>
-            {% for news in profile.news_id %}
+            {% for news in profile.news_ids %}
             <li>{{ news.news_name }}</li>
+            <p class="text-black-50 mb-0">{{ news.description }}</p>
             {% endfor %}
         </ul>
 
