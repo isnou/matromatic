@@ -1,7 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
 
         <ul>
             {% for news in newss %}
-            <li>{{ news.news_name }}</li>
-            <p class="text-black-50 mb-0">{{ news.description }}</p>
+            <h1 class="mx-auto my-0">{{ news.news_name }}</h1>
+            <h1 class="mx-auto my-0">{{ news.description }}</h1>
             {% endfor %}
         </ul>
