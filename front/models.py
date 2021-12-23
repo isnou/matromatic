@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 # user = models.OneToOneField(User, on_delete=models.CASCADE)
 
 
@@ -16,6 +17,7 @@ class Project(models.Model):
     def __str__(self):
         return self.project_name
 
+
 class News(models.Model):
     news_name = models.CharField(max_length=50)
     description = models.TextField(max_length=200, default='blank')
@@ -26,6 +28,7 @@ class News(models.Model):
 
     def __str__(self):
         return self.news_name
+
 
 class Profile(models.Model):
     profile_name = models.CharField(max_length=50, default='blank')
