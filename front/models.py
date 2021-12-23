@@ -9,7 +9,7 @@ class Project(models.Model):
     project_name = models.CharField(max_length=50)
     description = models.TextField(max_length=200, default='blank')
     left = models.BooleanField()
-    photo = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100)
+    photo = models.ImageField(upload_to='project/', height_field=None, width_field=None, max_length=100)
 
     class Meta:
         verbose_name = "project"
@@ -44,6 +44,16 @@ class Profile(models.Model):
     about_link = models.CharField(max_length=150)
     about_disc = models.CharField(max_length=100)
     news_id = models.OneToOneField(News, on_delete=models.CASCADE, default=1)
+    projects_id = models.OneToOneField(Project, on_delete=models.CASCADE, default=1)
+    contact_title = models.CharField(max_length=100, default='blank')
+    contact_link_area = models.CharField(max_length=200, default='blank')
+    contact_button = models.CharField(max_length=50, default='blank')
+    address_title = models.CharField(max_length=50, default='blank')
+    address = models.CharField(max_length=50, default='blank')
+    email_title = models.CharField(max_length=50, default='blank')
+    email = models.EmailField(max_length=300)
+    phone_title = models.CharField(max_length=50, default='blank')
+    phone = models.PhoneNumberField(null=True, blank=True)
 
     class Meta:
         verbose_name = "profile"
