@@ -18,4 +18,4 @@ class Profile(models.Model):
     about_disc = models.CharField(max_length=100)
 
 class SiteManager(models.Model):
-    profile_id = models.IntegerField(default=1)
+    profile_id = models.IntegerField()
