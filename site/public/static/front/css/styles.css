@@ -3033,13 +3033,13 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #64a19d;
+  color: #212529;
+  background-color: #c8c8c8;
   border-color: #64a19d;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #558985;
+  background-color: #202020;
   border-color: #50817e;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
@@ -11474,7 +11474,7 @@ body {
 
 #mainNav {
   min-height: 3.5rem;
-  background-color: #fff;
+  background-color: rgb(200 200 200);
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
