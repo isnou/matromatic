@@ -52,7 +52,7 @@ class Profile(models.Model):
     address_title = models.CharField(max_length=50, default='blank')
     address = models.CharField(max_length=50, default='blank')
     email_title = models.CharField(max_length=50, default='blank')
-    email = models.EmailField(max_length=300)
+    email = models.EmailField(max_length=300, blank=True)
     phone_title = models.CharField(max_length=50, default='blank')
     phone = PhoneNumberField(blank=True)
 
