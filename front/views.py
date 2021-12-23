@@ -16,7 +16,7 @@ def index(request):
 def news(request):
     try:
         profile = Profile.objects.get(pk=1)
-        news = profile.news_id.objects.all()
+        news = profile.news_id.objects.get(pk=1)
     except Profile.DoesNotExist:
         raise Http404("Profile does not exist")
 
