@@ -6,9 +6,8 @@ from django.http import Http404
 from .models import Profile# , SiteManager
 
 def index(request):
-    profile_id = 1
     try:
-        profile = Profile.objects.get(pk=profile_id)
+        profile = Profile.objects.get(pk=1)
     except Profile.DoesNotExist:
         raise Http404("Profile does not exist")
 
