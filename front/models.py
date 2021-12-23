@@ -17,6 +17,7 @@ class Profile(models.Model):
     about_text = models.TextField(max_length=500, default='blank')
     about_link = models.CharField(max_length=150)
     about_disc = models.CharField(max_length=100)
+    today_news = models.OneToOneField(User, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = "profile"
