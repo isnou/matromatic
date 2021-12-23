@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Profile, SiteProfile, News# , SiteManager
+from .models import SiteProfile, Project, News# , SiteManager
 
 
 admin.site.register(SiteProfile)
