@@ -13,14 +13,6 @@ def index(request):
 
     return render(request, 'base.html', {'profile': profile})
 
-def news(request):
-    try:
-        news = News.objects.get(pk=1)
-    except Profile.DoesNotExist:
-        raise Http404("Profile does not exist")
-
-    return render(request, 'news.html', {'news': news})
-
 def projects(request):
     try:
         project = Profile.projects_id.objects.all()
