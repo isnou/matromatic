@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 
 from django.http import Http404
-from .models import Profile# , SiteManager
+from .models import Profile, News, Project# , SiteManager
 
 def index(request):
     try:
@@ -15,8 +15,7 @@ def index(request):
 
 def news(request):
     try:
-        profile = Profile.objects.get(pk=1)
-        news = profile.news_id.objects.get(pk=1)
+        news = News.objects.all()
     except Profile.DoesNotExist:
         raise Http404("Profile does not exist")
 
