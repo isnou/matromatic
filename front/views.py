@@ -8,7 +8,7 @@ from .models import Profile, Project, News# , SiteManager
 def index(request):
 
     try:
-        profile = Profile.objects.get(pk=1)
+        profile = Profile.objects.get(pk=2)
     except Profile.DoesNotExist:
         raise Http404("Profile does not exist")
 
