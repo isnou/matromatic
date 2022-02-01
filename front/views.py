@@ -6,25 +6,19 @@ from django.http import Http404
 from .models import Profile, Project# , SiteManager
 
 def index(request):
+
     try:
         profile = Profile.objects.get(pk=1)
     except Profile.DoesNotExist:
         raise Http404("Profile does not exist")
+
     try:
-        project = Project.objects.all()
+        projects = Project.objects.all()
     except Project.DoesNotExist:
         raise Http404("Project does not exist")
     context = {
         'profile': profile,
-        'project': project
+        'projects': projects
     }
 
-    return render(request, 'base.html',context)
-
-def projects(request):
-    try:
-        project = project.projects_id.objects.all()
-    except Project.DoesNotExist:
-        raise Http404("Project does not exist")
-
-    return render(request, 'project.html', {'project': project})
+    return render(request, 'base.html', context)
