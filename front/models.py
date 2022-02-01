@@ -1,5 +1,6 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
+from django.utils import timezone
 from django.contrib.auth.models import User
 
 
@@ -23,7 +24,7 @@ class News(models.Model):
     news_name = models.CharField(max_length=50)
     description = models.TextField(max_length=200, blank=True)
     photo = models.ImageField(upload_to='news/', height_field=None, width_field=None, max_length=100)
-    entry_date = models.DateTimeField(blank=True)
+    entry_date = models.DateTimeField(default=timezone.now)
 
     class Meta:
         verbose_name = "news"
