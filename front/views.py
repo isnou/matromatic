@@ -11,7 +11,7 @@ def index(request):
     except Profile.DoesNotExist:
         raise Http404("Profile does not exist")
     try:
-        project = Project.projects_id.objects.all()
+        project = Project.objects.all()
     except Project.DoesNotExist:
         raise Http404("Project does not exist")
     context = {
