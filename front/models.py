@@ -46,7 +46,6 @@ class Profile(models.Model):
     about_text = models.TextField(max_length=500, blank=True)
     about_link = models.CharField(max_length=150)
     about_disc = models.CharField(max_length=100)
-    news_id = models.OneToOneField(News, on_delete=models.CASCADE, blank=True, default=1)
     contact_title = models.CharField(max_length=100, blank=True)
     contact_link_area = models.CharField(max_length=200, blank=True)
     contact_button = models.CharField(max_length=50, blank=True)
