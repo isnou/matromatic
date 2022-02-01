@@ -128,12 +128,12 @@
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                <!-- <i class="fas fa-map-marked-alt text-primary mb-2"></i> Font Awesome fontawesome.com -->
-                                <img class="img-fluid mb-3 mb-lg-0" src="http://www.matromatic.com/media/news/20211227_143515_6YEVVGu.jpg" alt="...">
+                                <img class="img-fluid mb-3 mb-lg-0" src="http://www.matromatic.com/media/{{ news.photo }}"  alt="...">
                                 <hr class="my-4 mx-auto">
                                 <div class="small text-black-50">
-                                    <div class="featured-text text-center text-lg-left"><h5>14/12/1900</h5>
-                                        <h2>Latest News</h2>
-                                        <p class="text-black-50 mb-0">Visite officielle du Ministre de l'industrie pour suivre l'état d'avancement du projet de réalisation d'une usine complète de traitement des pneus usagés (Matro Hadès)</p>
+                                    <div class="featured-text text-center text-lg-left"><h5>{{ news.entry_date }}</h5>
+                                        <h2>{{ news.news_name }}</h2>
+                                        <p class="text-black-50 mb-0">{{ news.description }}</p>
                                     </div>
                                 </div>
                             </div>
