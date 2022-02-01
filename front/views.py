@@ -10,8 +10,13 @@ def index(request):
         profile = Profile.objects.get(pk=1)
     except Profile.DoesNotExist:
         raise Http404("Profile does not exist")
+    try:
+        project = project.projects_id.objects.all()
+    except Project.DoesNotExist:
+        raise Http404("Project does not exist")
     context = {
-        'profile': profile
+        'profile': profile,
+        'project': project
     }
 
     return render(request, 'base.html',context)
