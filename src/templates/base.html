@@ -1,0 +1,512 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Matromatic | Machine industrielle et semi-industrielle</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'front/img/icon.ico' %}" />
+    <!-- load CSS -->
+    <link rel="stylesheet" href="{% static '/front/https://fonts.googleapis.com/css?family=Open+Sans:300'%}">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="{% static '/front/css/bootstrap.min.css' %}">                                  <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href=" {% static '/front/fontawesome/css/fontawesome-all.min.css' %}">                <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" type="text/css" href="{% static '/front/slick/slick.css' %}"/>                       <!-- http://kenwheeler.github.io/slick/ -->
+    <link rel="stylesheet" type="text/css" href="{% static '/front/slick/slick-theme.css' %}"/>
+    <link rel="stylesheet" href="{% static '/front/css/tooplate-style.css' %}">                               <!-- Templatemo style -->
+   <!-- Fontawesome Icon font -->
+	<link rel="stylesheet" href="{% static '/front/plugins/themefisher-font/style.css' %}">
+    <!-- bootstrap.min css -->
+	<link rel="stylesheet" href="{% static '/front/plugins/bootstrap/dist/css/bootstrap.min.css' %}">
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="{% static '/front/css/style.css' %}">
+
+
+</head>
+
+<body>
+    <div id="tm-bg"></div>
+    <div id="tm-wrap">
+        <div class="tm-main-content">
+            <div class="container tm-site-header-container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-md-col-xl-6 mb-md-0 mb-sm-4 mb-4 tm-site-header-col">
+
+                       <img src="{% static '/front/img/logo2.png' %}" class="img-fluid mb-5" >
+                        <div class="tm-site-header">
+
+                            <h1>MATROMATIC</h1>
+
+
+                            <img src="{% static '/front/img/underline.png' %}" class="img-fluid mb-6">
+                            <h4>Most innovative solutions for your industry </h4>
+                        </div>                        
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="content">
+                            <div class="grid">
+                                <div class="grid__item" id="team-link">
+                                    <div class="product">
+                                        <div class="tm-nav-link">
+                                            <i class="fas fa-home fa-3x tm-nav-icon"></i>
+                                            <h2>About us</h2>
+                                            <div class="product__bg"></div>
+                                        </div>
+
+                                        <div class="product__description">
+                                            <div class="p-sm-4 p-2">
+                                                <div class="row mb-3">
+                                                    <div class="col-12">
+                                                        <h2 class="tm-page-title">We Wre MATROMATIC</h2>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12"> <h3> We are a collective of professionals that have been integrated into a unified progressive thinking solution provider.</h3></div>
+
+                                            <section class="bg-one about section">
+                                                <div class="row tm-reverse-sm">
+                                                    <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms" >
+                                                        <div class="block">
+                                                            <div class="icon-box">
+                                                                <i class="tf-tools"></i>
+                                                            </div>
+                                                            <!-- Express About Yourself -->
+                                                            <div class="content text-center">
+                                                                <h3 class="ddd"> Creative</h3>
+                                                                <p>We are so creative</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms" >
+                                                        <div class="block">
+                                                            <div class="icon-box">
+                                                                <i class="tf-strategy"></i>
+                                                            </div>
+                                                            <!-- Express About Yourself -->
+                                                            <div class="content text-center">
+                                                                <h3 class="ddd"> Professional</h3>
+                                                                <p>We are so professional</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 text-center wow fadeInUp" data-wow-duration="500ms" >
+                                                        <div class="block">
+                                                            <div class="icon-box">
+                                                                <i class="tf-anchor2"></i>
+                                                            </div>
+                                                            <!-- Express About Yourself -->
+                                                            <div class="content text-center">
+                                                                <h3 class="ddd"> Genius</h3>
+                                                                <p>We are so genius</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </section>   <!-- End section -->
+                                                <div class="border"></div>
+
+                                            <section class="bg-one about section">
+                                                 <div class="row mb-3">
+                                                    <div class="col-12">
+                                                        <div class="title text-center wow fadeIn" data-wow-duration="500ms">
+                                                        <h2 class="tm-page-title">OUR CLIENTS</h2></div>
+                                                    </div>
+
+                                                </div>
+
+                                                    <div class="col-12"> <h3>Matromatic has been honored to partner up with these clients</h3></div>
+
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="p-sm-4 p-2 tm-img-container">
+                                                            <div class="tm-img-slider" id="tmImgSlider">
+                                                                <a href="#" class="tm-slider-img-link"><img src="{% static '/front/img/partners/alrim.jpg'%}"  alt="Image 1" class="img-fluid tm-slider-img"></a>
+                                                                <a href="#" class="tm-slider-img-link"><img src="{% static '/front/img/partners/enr.png'%}" alt="Image 2" class="img-fluid tm-slider-img"></a>
+                                                                <a href="#" class="tm-slider-img-link"><img src="{% static '/front/img/partners/cosider.png'%}" alt="Image 3" class="img-fluid tm-slider-img"></a>
+                                                                <a href="#" class="tm-slider-img-link"><img src="{% static '/front/img/partners/sonatrach.png'%}" alt="Image 4" class="img-fluid tm-slider-img"></a>
+                                                                <a href="#" class="tm-slider-img-link"><img src="{% static '/front/img/partners/bmt.png'%}" alt="Image 5" class="img-fluid tm-slider-img"></a>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </section>
+                                                <div class="border"></div>
+
+                                            <section class="bg-one about section">
+
+                                                <div class="row mb-3">
+
+                                                    <div class="col-12">
+                                                        <div class="title text-center wow fadeIn" data-wow-duration="500ms">
+
+                                                        <h2 class="tm-page-title">OUR TEAM</h2>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                    <div class="col-12"> <h3>Matromatic has an excellent team </h3></div>
+
+
+                                                <div class="slideshow-container">
+                                                    <div class="mySlides fade">
+                                                                <!-- testimonial single -->
+                                                        <div class="item text-center">
+
+                                                            <!-- client photo -->
+                                                            <div class="client-thumb">
+                                                                <img src="{% static '/front/img/team-1.jpg'%}" class="img-responsive" alt="Islem">
+                                                            </div>
+                                                            <!-- /client photo -->
+
+
+                                                            <!-- client info -->
+                                                            <div class="client-info">
+                                                                <div class="client-meta">
+                                                                    <h3>Nouioua Islem</h3>
+                                                                    <span>CEO/Founder</span>
+                                                                </div>
+
+                                                                <div class="client-comment">
+                                                                        <p> Master in Robotics and Artificial Vision | Seasoned developer and programmer | Deep Tech | Machine Learning | Computer Vision | Drone design and sensors.
+                                                                            </p>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /client info -->
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mySlides fade">
+                                                    <!-- testimonial single -->
+                                                        <div class="item text-center">
+
+                                                            <!-- team photo -->
+                                                            <div class="client-thumb">
+                                                                <img src="{% static '/front/img/team-1.jpg'%}" class="img-responsive" alt="Islem">
+                                                            </div>
+                                                            <!-- /team photo -->
+
+
+                                                            <!-- team info -->
+                                                            <div class="client-info">
+                                                                <div class="client-meta">
+                                                                    <h3>Habita Houda</h3>
+                                                                    <span>CTO/Founder</span>
+                                                                </div>
+
+                                                                <div class="client-comment">
+                                                                    <p>Master in Embedded Systems | Fullstack developer|  Human Machine Interface | Embedded System Platform (Unix)| Python multi-threaded  and Object Oriented programming. </p>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /team info -->
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="mySlides fade">
+                                                    <!-- testimonial single -->
+                                                        <div class="item text-center">
+
+                                                            <!-- client photo -->
+                                                            <div class="client-thumb">
+                                                                <img src="{% static '/front/img/team-1.jpg'%}" class="img-responsive" alt="Islem">
+                                                            </div>
+                                                            <!-- /client photo -->
+
+
+                                                            <!-- client info -->
+                                                            <div class="client-info">
+                                                                <div class="client-meta">
+                                                                    <h3>Nouioua Boubekeur</h3>
+                                                                    <span>MT</span>
+                                                                </div>
+
+                                                                <div class="client-comment">
+                                                                    <p></p>
+                                                                </div>
+                                                            </div>
+                                                            <!-- /client info -->
+                                                        </div>
+
+                                                    </div>
+
+                                                            <a class="prev" onclick="plusSlides(-1)">❮</a>
+                                                            <a class="next" onclick="plusSlides(1)">❯</a>
+                                                            <br>
+
+                                                            <div style="text-align:center">
+                                                              <span class="dot" onclick="currentSlide(1)"></span>
+                                                              <span class="dot" onclick="currentSlide(2)"></span>
+                                                              <span class="dot" onclick="currentSlide(3)"></span>
+                                                            </div>
+                                                    </div>
+
+                                             </section>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="grid__item" id="home-link">
+                                    <div class="product">
+                                        <div class="tm-nav-link">
+                                            <i class="fas fa-service fa-3x tm-nav-icon"></i>
+                                            <h2>Services</h2>
+                                            <div class="product__bg"></div>
+                                        </div>
+                                        <div class="product__description">
+                                            <div class="row mb-3">
+                                                <div class="col-12">
+                                                    <h2 class="tm-page-title">WHAT WE DO</h2>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+
+                                            <div class="col-12"> <h3>We’ve got everything you need to launch and grow your business</h3></div>
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                    <img src="{% static '/front/img/service-1.png'%}" class="img-fluid mb-3">
+                                                    <h3 class="ddd"> New technology</h3>
+                                                    <h3>To founding a unique business, it requires openness to new concepts and technologies .</h3>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                    <h3 class="ddd">Robotic</h3>
+                                                    <h3>We are in race with technology to create the most advanced performance systems .</h3>
+                                                    <img src="{% static '/front/img/service-2.png'%}" class="img-fluid">
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="grid__item">
+                                    <div class="product">
+                                        <div class="tm-nav-link">
+                                            <i class="fas fa-handshake fa-3x tm-nav-icon"></i><h2 >Projects</h2><div class="product__bg"></div>
+                                        </div>
+
+                                        <div class="product__description">
+                                            <div class="row mb-3">
+                                                    <div class="col-12">
+                                                        <h2 class="tm-page-title">OUR PROJECTS</h2>
+                                                    </div>
+                                            </div>
+
+
+
+                                             <div class="row mb-3">
+                                                    <div class="col-12">
+                                                        <h3>We love what we do, check out some of our latest works</h3>
+                                                    </div>
+                                            </div>
+
+                                            <div class="slideshow-container">
+
+                                                <div class="mySlides fade">
+                                                  <div class="numbertext">Chaine de transformation de pneus<</div>
+                                                  <img src="{% static '/front/img/projects/pneumatique.jpg'%}"style="width:100%">
+                                                    <h3 class="ddd"> Chaine de transformation de pneus</h3>
+
+                                                </div>
+
+                                                <div class="mySlides fade">
+                                                  <div class="numbertext">Ligne de recyclage de plastique</div>
+                                                  <img src="{% static '/front/img/projects/plastique.jpg'%}"style="width:100%">
+                                                    <h3 class="ddd"> Ligne de recyclage de plastique</h3>
+
+                                                </div>
+
+                                                <div class="mySlides fade">
+                                                  <div class="numbertext">Machine de coffrage mobile</div>
+                                                  <img src="{% static '/front/img/projects/coffrage.jpg'%}" style="width:100%">
+                                                    <h3 class="ddd">Machine de coffrage mobile</h3>
+
+                                                </div>
+
+                                                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                                                <a class="next" onclick="plusSlides(1)">❯</a>
+
+
+                                                <br>
+
+                                                <div style="text-align:center">
+                                                  <span class="dot" onclick="currentSlide(1)"></span>
+                                                  <span class="dot" onclick="currentSlide(2)"></span>
+                                                  <span class="dot" onclick="currentSlide(3)"></span>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                    </div>
+                                </div>
+
+
+
+
+
+                                <div class="grid__item">
+                                    <div class="product">
+                                        <div class="tm-nav-link">
+                                            <i class="fas fa-comments fa-3x tm-nav-icon"></i><h2>Contact</h2><div class="product__bg"></div>
+                                        </div>                                                              
+                                        <div class="product__description">
+                                            <div class="pt-sm-4 pb-sm-4 pl-sm-5 pr-sm-5 pt-2 pb-2 pl-3 pr-3">
+                                                <div class="row mb-3">
+                                                    <div class="col-12">
+                                                        <h2 class="tm-page-title">CONTACT US</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-12">
+                                                        <h3 >Reach out for a new project or just say hello</h3>
+                                                    </div>
+                                                </div>
+
+                                                        <div class="row">
+
+                                                            <div class="contact-info col-md-6 wow fadeInUp" data-wow-duration="500ms">
+                                                                <h4>Contact Info</h4>
+                                                                <br>
+                                                                <div class="contact-details">
+                                                                    <div class="con-info clearfix">
+                                                                        <i class="tf-map-pin"></i>
+                                                                        <span><h5>N°60 Lotissement Saidoun Kouba - Alger</h5></span>
+                                                                    </div>
+
+                                                                    <div class="con-info clearfix">
+                                                                        <i class="tf-ion-ios-telephone-outline"></i>
+                                                                        <span><h5>Phone: +213 540 20 26 21</h5></span>
+                                                                    </div>
+
+
+                                                                    <div class="con-info clearfix">
+                                                                        <i class="tf-ion-ios-email-outline"></i>
+                                                                        <span><h6>Email: contact@matromatic.com</h6></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- / End Contact Details -->
+
+                                                            <!-- Contact Form -->
+                                                            <div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+                                                                <form id="contact-form" method="post" action="sendmail.php" role="form">
+
+                                                                    <div class="form-group">
+                                                                        <input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                        <input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                        <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                        <textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>
+                                                                    </div>
+
+                                                                    <div id="mail-success" class="success">
+                                                                        Thank you. The Mailman is on His Way :)
+                                                                    </div>
+
+                                                                    <div id="mail-fail" class="error">
+                                                                        Sorry, don't know what happened. Try later :(
+                                                                    </div>
+
+                                                                    <div id="cf-submit">
+                                                                        <input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
+                                                                    </div>
+
+                                                                </form>
+                                                            </div>
+                                                            <!-- ./End Contact Form -->
+
+                                                        </div> <!-- end row -->
+
+
+                                                    <!-- Google Map -->
+
+                                                    <!-- /Google Map -->
+
+                                               <!-- end section -->
+
+
+
+
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>                       
+                    </div>
+                </div>                
+            </div>
+            <footer>
+                <p class="small tm-copyright-text">Copyright &copy; <span class="tm-current-year">2022</span>
+                
+               <a rel="nofollow" href="http://www.matromatic.com" class="tm-text-highlight">   matromatic.com</a></p>
+            </footer>
+        </div> <!-- .tm-main-content -->  
+    </div>
+    <!-- load JS -->
+    <script type="text/javascript" src="{% static '/front/js/script.js' %}"></script>
+    <script src="{% static '/front/js/main.js' %}"></script>
+    <script src="{% static '/front/js/jquery-3.2.1.slim.min.js' %}"></script>         <!-- https://jquery.com/ -->
+    <script src="{% static '/front/slick/slick.min.js' %}"></script>                  <!-- http://kenwheeler.github.io/slick/ -->
+    <script src="{% static '/front/js/anime.min.js' %}"></script>                     <!-- http://animejs.com/ -->
+
+
+    <script>   {% static '
+
+
+        /* DOM is ready
+        ------------------------------------------------*/
+        $(function(){
+
+            setupFooter();
+
+            $(window).resize(function(){
+                setupFooter();
+            });
+
+            $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright
+        });
+
+
+        }' %}
+
+    </script>
+
+
+
+</body>
+</html>

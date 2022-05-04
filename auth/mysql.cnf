@@ -1,5 +1,0 @@
-[client]
-database = 'matrodb'
-user = 'hissan'
-password = 'Pass@&#!6931'
-default-character-set = 'utf8'
