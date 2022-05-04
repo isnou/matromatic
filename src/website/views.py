@@ -1,6 +1,6 @@
 
 from django.shortcuts import render
-from front.forms import ContactUs
+from website.forms import ContactUs
 from django.core.mail import BadHeaderError, EmailMessage
 from django.conf import settings
 from django.http import Http404
