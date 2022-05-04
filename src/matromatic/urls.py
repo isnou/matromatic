@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.urls import include, path
-from matromatic import settings
+from src.matromatic import settings
 
 urlpatterns = [
                   path('', include('front.urls')),
