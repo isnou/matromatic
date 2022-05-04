@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-!mnfcx=ro6p$bn2-g__o2*g&g0ym+=m9!ls)#hn*==*6@8(*fw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,8 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'phonenumber_field',
-
-    'front',
+    'website',
 ]
 
 MIDDLEWARE = [
@@ -117,21 +116,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_ROOT = ""
-STATIC_URL = '/static/'
-STATICFILES_DIRS = ('/Users/macbook/django-projects/matromatic/site/public/static'),
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
-)
-
+STATIC_URL = 'static/'
+STATIC_ROOT = 'dftss-root/site/public/static'
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = "matromatic/site/public/media"
+MEDIA_ROOT= 'dftss-root/site/public/media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), 'templates'),)
+
+TEMPLATE_DIRS = (
+    os.path.join(os.path.dirname(__file__), 'templates'),
+)
