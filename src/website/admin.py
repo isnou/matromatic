@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Project, Service,Client, Team, Skill, Content
+from .models import Project, Service, Client, Team, Skill, Content
 
 
 admin.site.register(Project)
