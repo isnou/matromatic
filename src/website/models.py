@@ -75,7 +75,6 @@ class Content(models.Model):
                                   blank=True)
 
     intro_title = models.CharField(max_length=100, blank=True)
-    intro_box_title = models.CharField(max_length=100, blank=True)
     intro_text = models.TextField(max_length=200, blank=True)
 
     welcome_title = models.CharField(max_length=50, blank=True)
