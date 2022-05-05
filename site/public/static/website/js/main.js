@@ -1,24 +1,4 @@
-    {
-      document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight",
-    "var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this in a modern browser such as latest version of Chrome or Microsoft Edge.");
-
-    function setupFooter() {
-        var pageHeight = $('.tm-site-header-container').height() + $('footer').height() + 100;
-
-        var main = $('.tm-main-content');
-
-        if($(window).height() < pageHeight) {
-            main.addClass('tm-footer-relative');
-        }
-        else {
-            main.removeClass('tm-footer-relative');
-        }
-    }
-
-
-
-
-
+{
 	class Details {
 		constructor() {
 			this.DOM = {};
@@ -236,38 +216,6 @@
 	DOM.gridItems.forEach(item => items.push(new Item(item)));
 
 	DOM.details = new Details();
-
-	// slideshow javascript
-
-	let slideIndex = 2;
-    showSlides(slideIndex);
-
-    // Next/previous controls
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    // Thumbnail image controls
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-    }
-
 };
 
 

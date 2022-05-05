@@ -6,7 +6,17 @@ https://www.tooplate.com/view/2097-pop
 
 */
 
+body {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  color: white;
+  position: relative;
+}
 
+h1 {
+  font-size: 2.8rem;
+}
 
 #tm-bg {
   position: fixed;
@@ -63,7 +73,7 @@ p {
 
 .tm-site-header {
   margin: 10px;
-  text-align: left;
+  text-align: right;
   width: 100%;
 }
 
@@ -121,12 +131,7 @@ p {
 
 /* Expanding Grid Items from Codrops */
 .tm-page-title {
-
-    text-transform: capitalize;
-    font-weight: 700;
-    font-size: 30px;
-    color: #fff;
-
+  font-weight: 300;
 }
 .content {
   max-width: 370px;
@@ -201,7 +206,7 @@ p {
 }
 
 .details__bg--down {
-  background: #353b43;
+  background: #2c2a35;
 }
 
 .details__bg {
@@ -235,7 +240,7 @@ p {
 
 .slick-dots li button:before {
   font-size: 20px;
-  color:white;
+  color: white;
   opacity: 1;
 }
 
@@ -250,8 +255,8 @@ p {
 }
 
 .slick-dots li.slick-active button:before {
-  opacity: 0.3;
-  color: gray;
+  opacity: 0.75;
+  color: deepskyblue;
 }
 
 /* Contact */
