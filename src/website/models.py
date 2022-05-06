@@ -69,10 +69,8 @@ class Content(models.Model):
     head_title = models.CharField(max_length=50, blank=True)
     head_text = models.CharField(max_length=80, blank=True)
 
-    head_logo = models.ImageField(upload_to='content/head', height_field=None, width_field=None, max_length=100,
-                                  blank=True)
-    main_logo = models.ImageField(upload_to='content/main', height_field=None, width_field=None, max_length=100,
-                                  blank=True)
+    head_logo = models.ImageField(upload_to='content/head', height_field=None, width_field=None, max_length=100)
+    main_logo = models.ImageField(upload_to='content/main', height_field=None, width_field=None, max_length=100)
 
     intro_title = models.CharField(max_length=100, blank=True)
     intro_text = models.TextField(max_length=200, blank=True)
