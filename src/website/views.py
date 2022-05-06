@@ -22,4 +22,4 @@ def index(request):
         except BadHeaderError:
             return HttpResponse('Un en-tête non valide a été détecté.')
 
-    return render(request, "base.html", context)
+    return render(request, "base.html")
