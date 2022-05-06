@@ -76,12 +76,8 @@ WSGI_APPLICATION = 'matromatic.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'matromaticdb',
-        'USER': 'matro',
-        'PASSWORD': 'Pass@&#!6931',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
     }
 }
 
@@ -121,10 +117,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = 'dftss-root/site/public/static'
+STATIC_ROOT = 'matromatic-root/site/public/static'
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT= 'dftss-root/site/public/media'
+MEDIA_ROOT= 'matromatic-root/site/public/media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
