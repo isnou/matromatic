@@ -9,7 +9,7 @@ from .models import Content, Project, Service, Team, Partner, Client
 def index(request):
 
     try:
-        profile = Content.objects.get(pk=1)
+        profile = Content.objects.get(pk=0)
     except Content.DoesNotExist:
         raise Http404("Content does not exist")
 
