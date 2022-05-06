@@ -79,9 +79,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'matrodb',
         'USER': 'matro',
-        'PASSWORD':'Pass@&#!6931',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'PASSWORD': 'Pass@&#!6931',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
