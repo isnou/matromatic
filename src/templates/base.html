@@ -41,15 +41,20 @@
                                     <div class="product">
                                         <div class="tm-nav-link">
                                             <i class="fas fa-home fa-3x tm-nav-icon"></i>
-                                            <span class="tm-nav-text">Welcome</span>
+                                            <span class="tm-nav-text">{{ profile.welcome_title }}</span>
                                             <div class="product__bg"></div>        
                                         </div>                                    
                                         <div class="product__description">
                                             <div class="row mb-3">
                                                 <div class="col-12">
-                                                    <h2 class="tm-page-title">Welcome to Our Website</h2>
+                                                    <h2 class="tm-page-title">{{ profile.welcome_box_title }}</h2>
                                                 </div>
-                                            </div>                                        
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-12">
+                                                    <p>{{ profile.welcome_text }}</p>
+                                                </div>
+                                            </div>
                                             <div class="row">
                                                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                                     <img src="img/welcome-1.jpg" class="img-fluid mb-3">
@@ -182,7 +187,7 @@
                 </div>                
             </div>
             <footer>
-                <p class="small tm-copyright-text">Copyright &copy; <span class="tm-current-year">2020</span> Matromatic.
+                <p class="small tm-copyright-text">Copyright &copy; <span class="tm-current-year">2020</span> matromatic.
                 </p>
             </footer>
         </div> <!-- .tm-main-content -->  
