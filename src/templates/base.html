@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel = "icon" href="http://94.176.238.2/media/{{ content.head_logo }}" type = "image/x-icon">
-    <title>{{ content.head_title }}|{{ content.head_text }} </title>
-    
+    <title>{{ content.head_title }} | {{ content.head_text }} </title>
+
     <!-- load CSS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">  <!-- Google web font "Open Sans" -->
     <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}">                                  <!-- https://getbootstrap.com/ -->
@@ -29,9 +29,9 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-6 col-md-col-xl-6 mb-md-0 mb-sm-4 mb-4 tm-site-header-col">
                         <div class="tm-site-header">
-                            <h1 class="mb-4">MATROMATIC</h1>
+                            <h1 class="mb-4">{{ content.intro_title }}</h1>
                             <img src="{% static 'website/img/underline.png' %}" class="img-fluid mb-4">
-                            <p>Most innovative solutions for your industry</p>
+                            <p>{{ content.intro_text }} </p>
                         </div>                        
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
