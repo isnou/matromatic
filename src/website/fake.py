@@ -1,114 +1,64 @@
-from django.db import models
-from phonenumber_field.modelfields import PhoneNumberField
+from django.shortcuts import render
+from website.forms import ContactUs
+from django.core.mail import BadHeaderError, EmailMessage
+from django.conf import settings
+from django.http import Http404
+from .models import Content, Project, Service, Partner, Team, Client
 
 
-class Project(models.Model):
-    auto_inc = models.AutoField(primary_key=True)
-    project_name = models.CharField(max_length=50, unique=True)
-    project_description = models.TextField(max_length=200, blank=True)
-    image = models.ImageField(upload_to='project/', height_field=None, width_field=None, max_length=100)
+def index(request):
 
-    class Meta:
-        verbose_name = "project"
+    try:
+        profile = Content.objects.get(pk=1)
+    except Content.DoesNotExist:
+        raise Http404("Content does not exist")
 
-    def __str__(self):
-        return self.project_name
+    try:
+        projects = Project.objects.all()
+    except Project.DoesNotExist:
+        raise Http404("Project does not exist")
 
+    try:
+        services = Service.objects.all()
+    except Service.DoesNotExist:
+        raise Http404("Service does not exist")
 
-class Service(models.Model):
-    auto_inc = models.AutoField(primary_key=True)
-    service_title = models.CharField(max_length=50, unique=True)
-    service_description = models.TextField(max_length=200, blank=True)
-    icon = models.ImageField(upload_to='service/', height_field=None, width_field=None, max_length=100)
+    try:
+        partners = Partner.objects.all()
+    except Partner.DoesNotExist:
+        raise Http404("Partner does not exist")
 
-    class Meta:
-        verbose_name = "service"
+    try:
+        team = Team.objects.all()
+    except Project.DoesNotExist:
+        raise Http404("Team does not exist")
 
-    def __str__(self):
-        return self.service_title
+    try:
+        clients = Client.objects.all()
+    except Client.DoesNotExist:
+        raise Http404("Counter does not exist")
 
+    form = ContactUs(request.POST or None)
+    if form.is_valid():
+        subject = 'Subject:' + form.cleaned_data['subject']
+        name = form.cleaned_data['name']
+        email = form.cleaned_data['email']
+        from_email = '{name} <{email}>'.format(name=name, email=email)
+        message = form.cleaned_data['message']
+        recipient_list = [settings.EMAIL_HOST_USER]
+        email_message = EmailMessage(subject, message, from_email, recipient_list, reply_to=[email])
+        try:
+            email_message.send()
+        except BadHeaderError:
+            return HttpResponse('Un en-tête non valide a été détecté.')
 
-class Partner(models.Model):
-    partner_name = models.CharField(max_length=50, unique=True)
-    partner_logo = models.ImageField(upload_to='partner/', height_field=None, width_field=None, max_length=100)
+    context = {
+        'profile': profile,
+        'projects': projects,
+        'services': services,
+        'partners': partners,
+        'team': team,
+        'clients': clients
+    }
 
-    class Meta:
-        verbose_name = "partner"
-
-    def __str__(self):
-        return self.partner_name
-
-
-class Team(models.Model):
-    member_name = models.CharField(max_length=50, unique=True)
-    member_function = models.TextField(max_length=100, blank=True)
-    function_description = models.TextField(max_length=500, blank=True)
-    photo = models.ImageField(upload_to='team/', height_field=None, width_field=None, max_length=100)
-
-    class Meta:
-        verbose_name = "team"
-
-    def __str__(self):
-        return self.member_name
-
-
-class Client(models.Model):
-    client_name = models.CharField(max_length=50, unique=True)
-    client_logo = models.ImageField(upload_to='partner/', height_field=None, width_field=None, max_length=100)
-
-    class Meta:
-        verbose_name = "client"
-
-    def __str__(self):
-        return self.client_name
-
-
-class Content(models.Model):
-    profile_name = models.CharField(max_length=50, unique=True)
-
-    head_title = models.CharField(max_length=50, blank=True)
-    head_text = models.CharField(max_length=80, blank=True)
-
-    head_logo = models.ImageField(upload_to='content/head', height_field=None, width_field=None, max_length=100)
-    main_logo = models.ImageField(upload_to='content/main', height_field=None, width_field=None, max_length=100)
-
-    intro_title = models.CharField(max_length=100, blank=True)
-    intro_text = models.TextField(max_length=200, blank=True)
-
-    welcome_title = models.CharField(max_length=50, blank=True)
-    welcome_box_title = models.CharField(max_length=50, blank=True)
-    welcome_text = models.CharField(max_length=200, blank=True)
-
-    about_us_title = models.CharField(max_length=50, blank=True)
-    about_us_box_title = models.CharField(max_length=50, blank=True)
-    about_us_text = models.CharField(max_length=200, blank=True)
-    team_text = models.CharField(max_length=200, blank=True)
-    partners_text = models.CharField(max_length=200, blank=True)
-
-    projects_title = models.CharField(max_length=50, blank=True)
-    projects_box_title = models.CharField(max_length=50, blank=True)
-    projects_text = models.CharField(max_length=200, blank=True)
-    clients_text = models.CharField(max_length=200, blank=True)
-
-    contact_title = models.CharField(max_length=50, blank=True)
-    contact_box_title = models.CharField(max_length=50, blank=True)
-    contact_text = models.CharField(max_length=200, blank=True)
-    contact_address = models.CharField(max_length=500, blank=True)
-    contact_phone_title = models.CharField(max_length=50, blank=True)
-    contact_phone = PhoneNumberField(blank=True)
-    contact_email_title = models.CharField(max_length=50, blank=True)
-    contact_email = models.EmailField(max_length=300, blank=True)
-    contact_name_placeholder = models.CharField(max_length=100, blank=True)
-    contact_email_placeholder = models.CharField(max_length=100, blank=True)
-    contact_subject_placeholder = models.CharField(max_length=100, blank=True)
-    contact_message_placeholder = models.CharField(max_length=100, blank=True)
-    contact_submit_button = models.CharField(max_length=50, blank=True)
-    contact_facebook = models.URLField(max_length=500, blank=True)
-    contact_twitter = models.URLField(max_length=500, blank=True)
-    contact_instagram = models.URLField(max_length=500, blank=True)
-
-    class Meta:
-        verbose_name = "content"
-
-    def __str__(self):
-        return self.profile_name
+    return render(request, "base.html", context)
