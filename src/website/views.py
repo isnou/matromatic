@@ -3,10 +3,40 @@ from website.forms import ContactUs
 from django.core.mail import BadHeaderError, EmailMessage
 from django.conf import settings
 from django.http import Http404
-#from .models import Content, Project, Service, Partner, Team, Client
+from .models import Content, Project, Service, Team, Partner, Client
 
 
 def index(request):
+
+    try:
+        profile = Content.objects.get(pk=1)
+    except Content.DoesNotExist:
+        raise Http404("Content does not exist")
+
+    try:
+        projects = Project.objects.all()
+    except Project.DoesNotExist:
+        raise Http404("Project does not exist")
+
+    try:
+        services = Service.objects.all()
+    except Service.DoesNotExist:
+        raise Http404("Service does not exist")
+
+    try:
+        team = Team.objects.all()
+    except Project.DoesNotExist:
+        raise Http404("Team does not exist")
+
+    try:
+        partners = Partner.objects.all()
+    except Partner.DoesNotExist:
+        raise Http404("Partner does not exist")
+
+    try:
+        clients = Client.objects.all()
+    except Client.DoesNotExist:
+        raise Http404("Counter does not exist")
 
     form = ContactUs(request.POST or None)
     if form.is_valid():
@@ -22,4 +52,13 @@ def index(request):
         except BadHeaderError:
             return HttpResponse('Un en-tête non valide a été détecté.')
 
-    return render(request, "base.html")
+    context = {
+        'profile': profile,
+        'projects': projects,
+        'services': services,
+        'team': team,
+        'partners': partners,
+        'clients': clients
+    }
+
+    return render(request, "base.html", context)

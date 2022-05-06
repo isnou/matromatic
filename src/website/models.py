@@ -28,17 +28,6 @@ class Service(models.Model):
         return self.service_title
 
 
-class Partner(models.Model):
-    partner_name = models.CharField(max_length=50, unique=True)
-    partner_logo = models.ImageField(upload_to='partner/', height_field=None, width_field=None, max_length=100)
-
-    class Meta:
-        verbose_name = "partner"
-
-    def __str__(self):
-        return self.partner_name
-
-
 class Team(models.Model):
     member_name = models.CharField(max_length=50, unique=True)
     member_function = models.TextField(max_length=100, blank=True)
@@ -50,6 +39,17 @@ class Team(models.Model):
 
     def __str__(self):
         return self.member_name
+
+
+class Partner(models.Model):
+    partner_name = models.CharField(max_length=50, unique=True)
+    partner_logo = models.ImageField(upload_to='partner/', height_field=None, width_field=None, max_length=100)
+
+    class Meta:
+        verbose_name = "partner"
+
+    def __str__(self):
+        return self.partner_name
 
 
 class Client(models.Model):
