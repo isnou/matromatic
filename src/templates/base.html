@@ -59,7 +59,7 @@
 
                                                 {% for service in services %}
                                                 {% if service.auto_inc|divisibleby:2 %}
-                                                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-lg-0 mb-sm-4 mb-4">
+                                                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
                                                     <h5>{{ service.service_title }}</h5>
                                                     <p>{{ service.service_description }}</p>
                                                 </div>
@@ -71,7 +71,7 @@
                                                     <img src="http://89.40.4.102/media/{{ service.icon }}" width="150">
                                                 </div>
 
-                                                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-lg-0 mb-sm-4 mb-4">
+                                                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
                                                     <h5>{{ service.service_title }}</h5>
                                                     <p>{{ service.service_description }}</p>
                                                 </div>
