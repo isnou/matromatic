@@ -57,22 +57,23 @@
                                             </div>
                                             <div class="row">
 
+                                                {% for service in services %}
+
+                                                {% if service.auto_inc % 2 == 0 %}
                                                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                                    <img src="img/welcome-1.jpg" class="img-fluid mb-3">
-                                                    <p> First service </p>
+                                                    <img src="http://89.40.4.102/media/{{ service.icon }}" width="150">
+                                                    <h5>{{ service.service_title }}</h5>
+                                                    <p>{{ service.service_description }}</p>
                                                 </div>
+                                                {% else %}
                                                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                                    <p> Second service </p>
-                                                    <img src="img/welcome-2.jpg" class="img-fluid">
+                                                    <h5>{{ service.service_title }}</h5>
+                                                    <p>{{ service.service_description }}</p>
+                                                    <img src="http://89.40.4.102/media/{{ service.icon }}" width="150">
                                                 </div>
-                                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                                    <img src="img/welcome-1.jpg" class="img-fluid mb-3">
-                                                    <p> Third service </p>
-                                                </div>
-                                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                                    <p> Fourth service </p>
-                                                    <img src="img/welcome-2.jpg" class="img-fluid">
-                                                </div>
+                                                {% endif %}
+
+                                                {% endfor %}
 
                                             </div>
                                             
