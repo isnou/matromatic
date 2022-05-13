@@ -217,7 +217,9 @@
                                                 </div>
                                                 <div class="row mb-4">
                                                     <div class="col-12">
-                                                        <p>{{ profile.contact_text }}</p>
+                                                        <p>{{ profile.contact_text }} : {{ profile.contact_address }}</p>
+                                                        <p>{{ profile.contact_phone_title }} : {{ profile.contact_phone }}</p>
+                                                        <p>{{ profile.contact_email_title }} : {{ profile.contact_email }}</p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -225,16 +227,16 @@
                                                         <form action="index.html" method="post" class="contact-form">
                                                             <div class="row">
                                                                 <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                                                  <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"  required/>
+                                                                  <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="{{ profile.contact_name_placeholder }}"  required/>
                                                                 </div>
                                                                 <div class="form-group col-md-6 col-lg-6 col-xl-6 tm-col-email">
-                                                                  <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email"  required/>
+                                                                  <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="{{ profile.contact_email_placeholder }}"  required/>
                                                                 </div>
                                                             </div>                                                        
                                                             <div class="form-group">
-                                                              <textarea id="contact_message" name="contact_message" class="form-control" rows="9" placeholder="Message" required></textarea>
+                                                              <textarea id="contact_message" name="contact_message" class="form-control" rows="9" placeholder="{{ profile.contact_message_placeholder }}" required></textarea>
                                                             </div>
-                                                            <button type="submit" class="btn btn-primary tm-btn-submit">Submit</button>
+                                                            <button type="submit" class="btn tm-btn-gray tm-btn-submit">{{ profile.contact_submit_button }}</button>
                                                         </form>
                                                     </div>
                                                 </div>
