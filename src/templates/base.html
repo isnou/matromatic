@@ -59,26 +59,22 @@
 
                                                 {% for service in services %}
                                                 {% if service.auto_inc|divisibleby:2 %}
-
-                                                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-lg-0 mb-sm-4 mb-4">
                                                     <h5>{{ service.service_title }}</h5>
                                                     <p>{{ service.service_description }}</p>
                                                 </div>
-                                                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-lg-0 mb-sm-4 mb-4">
+                                                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
                                                     <img src="http://89.40.4.102/media/{{ service.icon }}" width="150">
                                                 </div>
-
                                                 {% else %}
-
-                                                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-lg-0 mb-sm-4 mb-4">
+                                                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
                                                     <img src="http://89.40.4.102/media/{{ service.icon }}" width="150">
                                                 </div>
-                                                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+
+                                                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-lg-0 mb-sm-4 mb-4">
                                                     <h5>{{ service.service_title }}</h5>
                                                     <p>{{ service.service_description }}</p>
                                                 </div>
-
-
                                                 {% endif %}
 
                                                 {% endfor %}
@@ -108,8 +104,8 @@
                                                         <p class="mb-4">Vestibulum aliquet, arcu accumsan lobortis bibendum, justo velit efficitur lorem, at pulvinar mi justo nec lacus. Nullam et libero aliquet, luctus nunc sit amet, tincidunt ligula. Sed finibus ante sed tortor cursus, nec malesuada lectus interdum.</p>
                                                         <p class="mb-4">Sed ex turpis, vulputate in efficitur id, lobortis eget nibh. Pellentesque maximus ipsum eget velit imperdiet sodales. Suspendisse in blandit mi.</p>
                                                         <p class="mb-5">Pellentesque finibus felis risus, ut malesuada felis viverra at. Quisque accumsan in mi non hendrerit.</p>
-                                                        <a href="#" class="btn tm-btn-gray">Read More</a>        
-                                                    </div>                                                
+                                                        <a href="#" class="btn tm-btn-gray">Read More</a>
+                                                    </div>
                                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-lg-0 mb-sm-4 mb-4">
                                                         <img src="img/team.jpg" class="img-fluid">
                                                     </div>
