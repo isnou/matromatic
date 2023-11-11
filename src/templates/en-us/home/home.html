@@ -12,43 +12,23 @@
 
     {% endblock %}
 
-    {% block body %}
+    {% block fancy_navbar_collapse %}
 
-        <body class="overflow-hidden-x">
-
-          <nav class="fancynavbar fancynavbar-expand-lg" data-zanim-lg='{"from":{"opacity":1,"x":70},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}' data-zanim-xs='{"from":{"opacity":1,"y":-37},"to":{"opacity":1,"y":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}' data-zanim-trigger="scroll" data-exclusive="true">
-            <div class="fancynavbar-togglerbar" data-onscroll-fade-in="data-onscroll-fade-in">
-                <a class="fancynavbar-brand" href="{% url 'home' %}">
-                    <img class="fancynavbar-brand-img" src="{% get_media_prefix %}{{ top_page.logo_main }}"  alt="" width="100" height="100" data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.4}' data-zanim-trigger="scroll"/>
-
-               </a>
-              <div class="fancynavbar-toggler">
-                <svg class="fancynavbar-toggler-icon" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.5}' data-zanim-trigger="scroll">
-                  <path id="path-top" d="M20,25c0,0,22,0,30,0c16,0,18.89,40.71-.15,21.75C38.7,35.65,19.9,16.8,19.9,16.8"></path>
-                  <path id="path-middle" d="M20,32h30"></path>
-                  <path id="path-bottom" d="M19.9,46.98c0,0,18.8-18.85,29.95-29.95C68.89-1.92,66,38.78,50,38.78c-8,0-30,0-30,0"></path>
-                </svg>
-              </div>
-              <div class="fancynavbar-addon fancynavbar-addon-height" data-zanim-lg='{"from":{"opacity":1,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.4}' data-zanim-trigger="scroll">
-
-                <a class="fancynavbar-addon-item" href="#languageModal" data-bs-toggle="modal">
-                  <span class="font-sans-serif ls fw-black fs--1 d-block">EN</span>
-                </a>
-              </div>
-             </div>
-            <div class="fancynavbar-collapse">
-                <ul class="fancynavbar-nav">
-                  <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultWhyUs"><span class="fancynav-link-content">why us</span></a></li>
-                  <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultServices"><span class="fancynav-link-content">services</span></a></li>
-                  <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultProgressbar"><span class="fancynav-link-content">performance</span></a></li>
-                  <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultPartners"><span class="fancynav-link-content">partners</span></a></li>
-                  <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultProjects"><span class="fancynav-link-content">our projects</span></a></li>
-                  <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="{% url 'contact-us' %}?init=True"><span class="fancynav-link-content">contact</span></a></li>
-                </ul>
-            </div>
-          </nav>
+        <div class="fancynavbar-collapse">
+            <ul class="fancynavbar-nav">
+              <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultWhyUs"><span class="fancynav-link-content">why us</span></a></li>
+              <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultServices"><span class="fancynav-link-content">services</span></a></li>
+              <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultProgressbar"><span class="fancynav-link-content">performance</span></a></li>
+              <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultPartners"><span class="fancynav-link-content">partners</span></a></li>
+              <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultProjects"><span class="fancynav-link-content">our projects</span></a></li>
+              <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="{% url 'contact-us' %}?init=True"><span class="fancynav-link-content">contact</span></a></li>
+            </ul>
+        </div>
+    {% endblock %}
 
 
+
+    {% block main_content %}
           <!-- ===============================================-->
           <!--    Main Content-->
           <!-- ===============================================-->
@@ -438,48 +418,6 @@
           <!--    End of Main Content-->
           <!-- ===============================================-->
 
-
-          <!--===============================================-->
-          <!--    Footer-->
-          <!--===============================================-->
-          <footer class="footer bg-black text-600 py-4 font-sans-serif text-center overflow-hidden" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-lg-4 order-lg-2 position-relative">
-                  <a class="indicator indicator-up" href="#top">
-                    <span class="indicator-arrow indicator-arrow-one" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":0.9}'></span>
-                    <span class="indicator-arrow indicator-arrow-two" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":1.05}'></span>
-                  </a>
-                </div>
-
-                <div class="col-lg-4 text-lg-start mt-4 mt-lg-0">
-                  <p class="fs--1 text-uppercase ls fw-bold mb-0">COPYRIGHT©  <strong><a class="text-600" href="{{footer.made_by_link}}">{{footer.made_by}}</a></strong></p>
-                </div>
-
-              </div>
-            </div>
-          </footer>
-
-          <!--===============================================-->
-          <!--    Modal for language selection-->
-          <!--===============================================-->
-          <!-- Modal-->
-          <div class="overflow-hidden">
-            <div class="modal fade fade-in" id="languageModal" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-xs mx-auto" role="document">
-                <div class="modal-content bg-black">
-                  <div class="modal-body text-center p-0"><button class="btn-close text-white position-absolute top-0 end-0 times-icon mt-2 me-2 p-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <ul class="list-unstyled my-0 py-4 font-sans-serif">
-                      <li><a class="text-white fw-bold pt-1 d-block" href="../homes/default.html">English</a></li>
-                      <li><a class="pt-1 d-block text-500" href="#!">Français</a></li>
-                      <li><a class="text-500 pt-1 d-block" href="../pages/rtl.html">عربى</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-  </body>
     {% endblock %}
 
 
