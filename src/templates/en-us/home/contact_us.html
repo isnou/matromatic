@@ -12,101 +12,40 @@
 
 
 
-     {% block body %}
+     {% block main_content %}
 
-            <body class="overflow-hidden-x">
-
-              <nav class="fancynavbar fancynavbar-expand-lg" data-zanim-lg='{"from":{"opacity":1,"x":70},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}' data-zanim-xs='{"from":{"opacity":1,"y":-37},"to":{"opacity":1,"y":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}' data-zanim-trigger="scroll" data-exclusive="true">
-                <div class="fancynavbar-togglerbar" data-onscroll-fade-in="data-onscroll-fade-in">
-                    <a class="fancynavbar-brand" href="{% url 'home' %}">
-                        <img class="fancynavbar-brand-img" src="{% get_media_prefix %}{{ top_page.logo_main }}"  alt="" width="100" height="100" data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.4}' data-zanim-trigger="scroll"/>
-                   </a>
-
-                  <div class="fancynavbar-addon fancynavbar-addon-height" data-zanim-lg='{"from":{"opacity":1,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.4}' data-zanim-trigger="scroll">
-                    <a class="fancynavbar-addon-item" href="#languageModal" data-bs-toggle="modal">
-                      <span class="font-sans-serif ls fw-black fs--1 d-block">EN</span>
-                    </a>
-                  </div>
-                 </div>
-
-              </nav>
-
-              <!-- ============================================-->
-
-              <!-- ============================================-->
-              <!-- <section> begin ============================-->
-              <section class="py-0" id="page-contact">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-lg-6 bg-white pt-8 pb-4">
-                      <div class="row h-100 flex-center">
-                        <div class="col-lg-8" data-zanim-lg='{"animation":"slide-left","delay":0.6}' data-zanim-trigger="scroll">
-                          <h1 class="text-decoration-underline d-inline-block mb-4 mb-lg-6">contact</h1>
-                          <p class="fw-bold mb-0">Address:<span class="ms-2 fw-normal">Via Cerva 19 - Milano, Italy</span></p>
-                          <p class="fw-bold mb-0">Phone:<span class="ms-2 fw-normal"><a class="text-700" href="tel:+13234324534">+13234324534</a></span></p>
-                          <p class="fw-bold mb-4">E-mail:<span class="ms-2 fw-normal fst-italic"><a class="text-700" href="mailto:info@sparrow.com">info@sparrow.com</a></span></p>
-                          <div class="mt-3"><a class="btn btn-dark btn-sm me-2" href="#!"><span class="fab fa-twitter" data-fa-transform="grow-6"></span></a><a class="btn btn-dark btn-sm me-2" href="#!"><span class="fab fa-facebook-f" data-fa-transform="grow-6"></span></a><a class="btn btn-dark btn-sm me-2" href="#!"><span class="fab fa-google-plus-g" data-fa-transform="grow-6"></span></a><a class="btn btn-dark btn-sm" href="#!"><span class="fab fa-linkedin-in" data-fa-transform="grow-6"></span></a></div>
-                          <h3 class="mt-7">Give us a shout</h3>
-                          <form class="mt-4" method="POST"><input class="form-control" type="hidden" name="to" value="username@domain.extension" /><input class="form-control mt-3" type="text" placeholder="Your Name" aria-label="Text input with dropdown button" /><input class="form-control mt-3" type="text" placeholder="Phone Number" aria-label="Text input with dropdown button" /><textarea class="form-control mt-3" rows="11" placeholder="Your Message" required="required"></textarea>
-                            <div class="d-grid"><button class="btn btn-block btn-dark mt-4" type="submit">Send<span class="fa fa-paper-plane ms-1"></span></button></div>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6 px-0">
-                      <div class="sticky-top ovrflow-hidden-y">
-                        <div class="sticky-top vh-lg-100 py-9">
-                          <div class="bg-holder" style="background-image:url({% static 'manager/matromatic_img/images/background.jpg' %});" data-zanim-trigger="scroll" data-zanim-lg='{"animation":"zoom-out-slide-right","delay":0.4}'></div>
-                        <!--/.bg-holder-->
-                        </div>                <!--Mobile Fallback-->
-                      </div>
-                    </div>
-
-                  </div>
-                </div><!-- end of .container-->
-              </section><!-- <section> close ============================-->
-              <!-- ============================================-->
-             <!--===============================================-->
-          <!--    Footer-->
-          <!--===============================================-->
-          <footer class="footer bg-black text-600 py-4 font-sans-serif text-center overflow-hidden" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-lg-4 order-lg-2 position-relative">
-                  <a class="indicator indicator-up" href="#top">
-                    <span class="indicator-arrow indicator-arrow-one" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":0.9}'></span>
-                    <span class="indicator-arrow indicator-arrow-two" data-zanim-xs='{"from":{"opacity":0,"y":15},"to":{"opacity":1,"y":-5,"scale":1},"ease":"Back.easeOut","duration":0.4,"delay":1.05}'></span>
-                  </a>
-                </div>
-
-                <div class="col-lg-4 text-lg-start mt-4 mt-lg-0">
-                  <p class="fs--1 text-uppercase ls fw-bold mb-0">COPYRIGHT©  <strong><a class="text-600" href="{{footer.made_by_link}}">{{footer.made_by}}</a></strong></p>
-                </div>
-
-              </div>
-            </div>
-          </footer>
-
-          <!--===============================================-->
-          <!--    Modal for language selection-->
-          <!--===============================================-->
-          <!-- Modal-->
-          <div class="overflow-hidden">
-            <div class="modal fade fade-in" id="languageModal" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered modal-xs mx-auto" role="document">
-                <div class="modal-content bg-black">
-                  <div class="modal-body text-center p-0"><button class="btn-close text-white position-absolute top-0 end-0 times-icon mt-2 me-2 p-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <ul class="list-unstyled my-0 py-4 font-sans-serif">
-                      <li><a class="text-white fw-bold pt-1 d-block" href="../homes/default.html">English</a></li>
-                      <li><a class="pt-1 d-block text-500" href="#!">Français</a></li>
-                      <li><a class="text-500 pt-1 d-block" href="../pages/rtl.html">عربى</a></li>
-                    </ul>
-                  </div>
-                </div>
+        <!-- <section> begin ============================-->
+        <section class="py-0" id="page-contact">
+        <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 bg-white pt-8 pb-4">
+            <div class="row h-100 flex-center">
+              <div class="col-lg-8" data-zanim-lg='{"animation":"slide-left","delay":0.6}' data-zanim-trigger="scroll">
+                <h1 class="text-decoration-underline d-inline-block mb-4 mb-lg-6">contact</h1>
+                <p class="fw-bold mb-0">Address:<span class="ms-2 fw-normal">Via Cerva 19 - Milano, Italy</span></p>
+                <p class="fw-bold mb-0">Phone:<span class="ms-2 fw-normal"><a class="text-700" href="tel:+13234324534">+13234324534</a></span></p>
+                <p class="fw-bold mb-4">E-mail:<span class="ms-2 fw-normal fst-italic"><a class="text-700" href="mailto:info@sparrow.com">info@sparrow.com</a></span></p>
+                <div class="mt-3"><a class="btn btn-dark btn-sm me-2" href="#!"><span class="fab fa-twitter" data-fa-transform="grow-6"></span></a><a class="btn btn-dark btn-sm me-2" href="#!"><span class="fab fa-facebook-f" data-fa-transform="grow-6"></span></a><a class="btn btn-dark btn-sm me-2" href="#!"><span class="fab fa-google-plus-g" data-fa-transform="grow-6"></span></a><a class="btn btn-dark btn-sm" href="#!"><span class="fab fa-linkedin-in" data-fa-transform="grow-6"></span></a></div>
+                <h3 class="mt-7">Give us a shout</h3>
+                <form class="mt-4" method="POST"><input class="form-control" type="hidden" name="to" value="username@domain.extension" /><input class="form-control mt-3" type="text" placeholder="Your Name" aria-label="Text input with dropdown button" /><input class="form-control mt-3" type="text" placeholder="Phone Number" aria-label="Text input with dropdown button" /><textarea class="form-control mt-3" rows="11" placeholder="Your Message" required="required"></textarea>
+                  <div class="d-grid"><button class="btn btn-block btn-dark mt-4" type="submit">Send<span class="fa fa-paper-plane ms-1"></span></button></div>
+                </form>
               </div>
             </div>
           </div>
-            </body>
+          <div class="col-lg-6 px-0">
+            <div class="sticky-top ovrflow-hidden-y">
+              <div class="sticky-top vh-lg-100 py-9">
+                <div class="bg-holder" style="background-image:url({% static 'manager/matromatic_img/images/background.jpg' %});" data-zanim-trigger="scroll" data-zanim-lg='{"animation":"zoom-out-slide-right","delay":0.4}'></div>
+              <!--/.bg-holder-->
+              </div>                <!--Mobile Fallback-->
+            </div>
+          </div>
+        
+        </div>
+        </div><!-- end of .container-->
+        </section><!-- <section> close ============================-->
+        <!-- ============================================-->
 
     {% endblock %}
 
