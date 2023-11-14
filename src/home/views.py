@@ -31,11 +31,6 @@ def home(request):
         raise Http404("Services informations do not exist")
 
     try:
-        processes = OurProcess.objects.all()
-    except OurProcess.DoesNotExist:
-        raise Http404("Process informations do not exist")
-
-    try:
         partners = Partner.objects.all()
     except Partner.DoesNotExist:
         raise Http404("Partners informations do not exist")
