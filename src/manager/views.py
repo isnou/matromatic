@@ -29,7 +29,6 @@ def home_manager(request, action):
         main_contents = Content.objects.all()
         services_form = ServiceForm()
         services = Service.objects.all()
-        process_steps = OurProcess.objects.all()
         performances = Performance.objects.all()
         clients = Client.objects.all()
         partners = Partner.objects.all()
@@ -42,7 +41,6 @@ def home_manager(request, action):
             'main_contents': main_contents,
             'services_form': services_form,
             'services': services,
-            'process_steps': process_steps,
             'performances': performances,
             'clients': clients,
             'partners': partners,
