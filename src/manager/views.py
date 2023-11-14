@@ -57,7 +57,7 @@ def home_manager(request, action):
             if top_page_form.is_valid():
                 top_page_form.save()
 
-        request.session['tab'] = 'top_page'
+        request.session['tab'] = 'top-page'
         return redirect('home-manager', 'top_page')
     # -------------------- end create top page ------------------ #
 
@@ -69,7 +69,7 @@ def home_manager(request, action):
             top_page_form = TopPageForm(request.POST, request.FILES, instance=selected_top_page)
             top_page_form.save()
             request.session['tab'] = 'top-page'
-            return redirect('home-manager', 'top-page')
+            return redirect('home-manager', 'top_page')
         # ------------------- end edit top page ---------------- #
 
         # -------------------- delete top page ----------------- #
@@ -89,7 +89,7 @@ def home_manager(request, action):
             if main_content_form.is_valid():
                 main_content_form.save()
 
-        request.session['tab'] = 'create_main_content'
+        request.session['tab'] = 'top-page'
         return redirect('home-manager', 'top_page')
     # -------------------- end create main content ------------------ #
 
