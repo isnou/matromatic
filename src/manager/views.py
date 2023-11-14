@@ -49,7 +49,7 @@ def home_manager(request, action):
             'projects': projects,
             'footers': footers,
         }
-    return render(request, url, context)
+        return render(request, url, context)
     # ---------------------- create top page -------------------- #
     if action == 'create_top_page':
         if request.method == 'POST':
