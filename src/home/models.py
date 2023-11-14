@@ -104,6 +104,17 @@ class Service(models.Model):
 # ---------------------------------------------------------------------- #
 # ------------------------------ Processes ------------------------------- #
 
+class OurProcess(models.Model):
+    process_number = models.IntegerField(blank=True)
+    process_title = models.CharField(max_length=70, blank=True)
+    process_description = models.TextField(max_length=200, blank=True)
+    photo = models.ImageField(upload_to='our_process/', height_field=None, width_field=None, max_length=100)
+
+    class Meta:
+        verbose_name = "process"
+
+    def __str__(self):
+        return self.process_title
 
 
 # ---------------------------------------------------------------------- #

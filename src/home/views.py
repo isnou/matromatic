@@ -1,6 +1,6 @@
 from django.http import Http404
 from django.shortcuts import render
-from .models import TopPage, Content, Service, Partner, SocialMedia, \
+from .models import TopPage, Content, Service, OurProcess, Partner, SocialMedia, \
     Footer, Client, Project, Performance
 
 
@@ -29,6 +29,11 @@ def home(request):
         services = Service.objects.all()
     except Service.DoesNotExist:
         raise Http404("Services informations do not exist")
+
+    try:
+        processes = OurProcess.objects.all()
+    except OurProcess.DoesNotExist:
+        raise Http404("Process informations do not exist")
 
     try:
         partners = Partner.objects.all()
@@ -60,6 +65,7 @@ def home(request):
         'content': content,
         'footer': footer,
         'services': services,
+        'processes': processes,
         'partners': partners,
         'clients': clients,
         'projects': projects,
@@ -81,11 +87,6 @@ def contact_us(request):
         top_page = TopPage.objects.get(language='en')
     except TopPage.DoesNotExist:
         raise Http404("Top page does not exist")
-
-    try:
-        content = Content.objects.get(language='en')
-    except Content.DoesNotExist:
-        raise Http404("Content does not exist")
 
     try:
         footer = Footer.objects.get(language='en')

@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from home.models import TopPage, Service, Performance, Partner, Client, Project, Content, Footer
+from home.models import TopPage, Service, OurProcess, Performance, Partner, Client, Project, Content, Footer
 
 
 class TopPageForm(ModelForm):
@@ -26,7 +26,10 @@ class ServiceForm(ModelForm):
         fields = "__all__"
 
 
-
+class ProcessForm(ModelForm):
+    class Meta:
+        model = OurProcess
+        fields = "__all__"
 
 
 class PerformanceForm(ModelForm):
