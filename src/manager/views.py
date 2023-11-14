@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from home.models import TopPage, Content, Service, OurProcess, Performance, Client, Partner, Project, Footer
-from .forms import TopPageForm, ContentForm, FooterForm, ServiceForm, ProcessForm, ClientForm, PartnerForm, \
+from home.models import TopPage, Content, Service, Performance, Client, Partner, Project, Footer
+from .forms import TopPageForm, ContentForm, FooterForm, ServiceForm, ClientForm, PartnerForm, \
     ProjectForm, PerformanceForm
 
 
@@ -177,38 +177,6 @@ def home_manager(request, action):
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'top-page')
     # ------------------- end delete service -------------------- #
-
-    # ------------------- add process step ---------------------- #
-    if action == 'add_process_step':
-        if request.method == 'POST':
-            process_form = ProcessForm(request.POST, request.FILES)
-            if process_form.is_valid():
-                process_form.save()
-
-        request.session['tab'] = 'top-page'
-        return redirect('home-manager', 'top-page')
-    # ---------------- end add process step---------------------- #
-
-    # -------------------- edit process step--------------------- #
-    if action == 'edit_process_step':
-        if request.method == 'POST':
-            process_step_id = request.POST.get('{process_step_id', False)
-            selected_process_step = OurProcess.objects.all().get(id=process_step_id)
-            process_form = ProcessForm(request.POST, request.FILES, instance=selected_process_step)
-            process_form.save()
-            request.session['tab'] = 'top-page'
-            return redirect('home-manager', 'top-page')
-    # ------------------- end edit process step------------------ #
-
-    # -------------------- delete process step------------------- #
-    if action == 'delete_process_step':
-        if request.method == 'POST':
-            process_step_id = request.POST.get('process_step_id', False)
-            selected_process_step = OurProcess.objects.all().get(id=process_step_id)
-            selected_process_step.delete()
-            request.session['tab'] = 'top-page'
-            return redirect('home-manager', 'top-page')
-    # ------------------- end delete process step---------------- #
 
     # ---------------------- add performance--------------------- #
     if action == 'add_performance':
