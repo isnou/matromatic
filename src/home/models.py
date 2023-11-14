@@ -52,8 +52,8 @@ class Content(models.Model):
     step_four_title = models.TextField(max_length=100, blank=True)
     step_four_description = models.TextField(max_length=500, blank=True)
 
-    partners_intro = models.TextField(max_length=200, blank=True)
-    projects_intro = models.TextField(max_length=200, blank=True)
+    partners_intro = models.TextField(max_length=800, blank=True)
+    projects_intro = models.TextField(max_length=300, blank=True)
     client_count = models.CharField(max_length=100, blank=True)
     main_background_image = models.ImageField(upload_to='content/main_background_image', blank=True)
 
