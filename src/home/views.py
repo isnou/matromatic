@@ -60,7 +60,6 @@ def home(request):
         'content': content,
         'footer': footer,
         'services': services,
-        'processes': processes,
         'partners': partners,
         'clients': clients,
         'projects': projects,
