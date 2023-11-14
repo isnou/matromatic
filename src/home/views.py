@@ -1,6 +1,6 @@
 from django.http import Http404
 from django.shortcuts import render
-from .models import TopPage, Content, Service, OurProcess, Partner, SocialMedia, \
+from .models import TopPage, Content, Service, Partner, SocialMedia, \
     Footer, Client, Project, Performance
 
 
