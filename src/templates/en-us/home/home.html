@@ -1,427 +1,980 @@
-{% extends "en-us/home/base.html" %}
+<!doctype html>
 {% load static %}
-    <!-- ===============================================-->
-    <!--    Document Title-->
-    <!-- ===============================================-->
-    {% block title %}
 
-         <title>{{ top_page.head_title }} |  {{ top_page.head_text }}</title>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Definity - Agency 2 Onepage</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {% endblock %}
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="{% static 'home/assets/styles/vendor/bootstrap.min.css' %}">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="{% static 'home/assets/fonts/et-lineicons/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'home/assets/fonts/linea-font/css/linea-font.css' %}">
+        <link rel="stylesheet" href="{% static 'home/assets/fonts/fontawesome/css/font-awesome.min.css' %}">
+        <!-- Slider -->
+        <link rel="stylesheet" href="{% static 'home/assets/styles/vendor/slick.css' %}">
+        <!-- Lightbox -->
+        <link rel="stylesheet" href="{% static 'home/assets/styles/vendor/magnific-popup.css' %}">
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="{% static 'home/assets/styles/vendor/animate.css' %}">
 
-    {% block fancy_navbar_toggler%}
-        <div class="fancynavbar-toggler">
-            <svg class="fancynavbar-toggler-icon" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.5}' data-zanim-trigger="scroll">
-              <path id="path-top" d="M20,25c0,0,22,0,30,0c16,0,18.89,40.71-.15,21.75C38.7,35.65,19.9,16.8,19.9,16.8"></path>
-              <path id="path-middle" d="M20,32h30"></path>
-              <path id="path-bottom" d="M19.9,46.98c0,0,18.8-18.85,29.95-29.95C68.89-1.92,66,38.78,50,38.78c-8,0-30,0-30,0"></path>
-            </svg>
+
+        <!-- Definity CSS -->
+        <link rel="stylesheet" href="{% static 'home/assets/styles/main.css' %}">
+        <link rel="stylesheet" href="{% static 'home/assets/styles/responsive.css' %}">
+
+        <!-- JS -->
+        <script src="{% static 'home/assets/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+    </head>
+    <body id="page-top" data-spy="scroll" data-target=".navbar">
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MH7TSF"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MH7TSF');</script>
+        <!-- End Google Tag Manager -->
+        
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <!-- ========== Preloader ========== -->
+
+        <div class="preloader">
+          <img src="assets/images/loader.svg" alt="Loading...">
         </div>
-    {% endblock %}
 
-    {% block fancy_navbar_collapse %}
-        <div class="fancynavbar-collapse">
-            <ul class="fancynavbar-nav">
-              <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultWhyUs"><span class="fancynav-link-content">why us</span></a></li>
-              <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultServices"><span class="fancynav-link-content">services</span></a></li>
-              <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultProgressbar"><span class="fancynav-link-content">performance</span></a></li>
-              <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultPartners"><span class="fancynav-link-content">partners</span></a></li>
-              <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultProjects"><span class="fancynav-link-content">our projects</span></a></li>
-              <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="{% url 'contact-us' %}?init=True"><span class="fancynav-link-content">contact</span></a></li>
+
+
+
+        <!-- ========== Navigation ========== -->
+
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse navbar-trans  navbar-fw" role="navigation">
+          <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html"><img src="assets/images/logo-light.png" alt="Definity - Logo"></a>
+          </div>
+
+          <!-- Navbar Links -->
+          <div id="navbar" class="navbar-collapse collapse page-scroll navbar-right">
+            <ul class="nav navbar-nav">
+              <li><a href="#home">Home<span class="sr-only"></span></a></li>
+              <li><a href="#about">About<span class="sr-only"></span></a></li>
+              <li><a href="#services">Services<span class="sr-only"></span></a></li>
+              <li><a href="#portfolio">Portfolio<span class="sr-only"></span></a></li>
+              <li><a href="#testimonials">Testimonials<span class="sr-only"></span></a></li>
+              <li><a href="#blog">Blog<span class="sr-only"></span></a></li>
+              <li><a href="#contact">Contact<span class="sr-only"></span></a></li>
+              <li><a href="index.html">All Demos<span class="sr-only"></span></a></li>
+            </ul><!-- / .nav .navbar-nav -->              
+          </div><!--/.navbar-collapse -->
+        </nav><!-- / .navbar -->
+
+
+
+        <!-- ========== Hero Cover ========== -->
+
+        <div id="home" class="agency2-hero">
+          <div class="bg-overlay">
+            
+            <div id="large-header" class="large-header">
+              <canvas id="demo-canvas" class="demo-canvas"></canvas>
+
+              <!-- Hero Content -->
+              <div class="hero-content-wrapper">
+                <div class="hero-content">
+                  
+                  <img src="assets/images/hero/ag2-logo.png" alt="Creative Agency Template">
+                  <h1 class="hero-lead">Creative Agency</h1>
+                  <h4 class="h-alt hero-secondary">Web Design &amp; Development</h4>
+                  <a href="#about" class="btn btn-light">Learn More</a>
+                  
+                  <!-- Scroller -->
+                  <a href="#about" class="scroller">
+                    <span class="scroller-text">scroll down</span>
+                    <span class="linea-basic-magic-mouse"></span>
+                  </a>
+
+                </div><!-- / .hero-content -->
+              </div><!-- / .hero-content-wrapper -->
+
+            </div><!-- / #large-header -->
+
+          </div><!-- / .bg-overlay -->
+        </div><!-- / #home -->
+
+
+
+        <!-- ========== About - Section ========== -->
+
+        <section id="about" class="container">
+          <div class="row section">
+            
+            <header class="sec-heading">
+              <h2>About Studio</h2>
+              <span class="subheading">Lorem ipsum dolor sit amet, consectetur</span>
+            </header>
+
+            <div class="col-md-4">
+              <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              <footer><cite>by Henry Hill</cite></footer></blockquote>
+            </div>
+            <div class="col-md-4">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dolor, hic tempore omnis! Et, quod! Repudiandae itaque necessitatibus, facilis optio debitis incidunt, veniam placeat fuga eos molestiae culpa rem eveniet.</p>
+            </div>
+            <div class="col-md-4">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro dolor, hic tempore omnis! Et, quod! Repudiandae itaque necessitatibus, facilis optio debitis incidunt, veniam placeat fuga eos molestiae culpa rem eveniet.</p>
+            </div>
+          </div><!-- / .row -->
+          <div class="row ws-m">
+            <div class="col-md-12 text-center">
+              <a href="pages/about-1.html" class="btn-text">More about us</a>
+            </div>
+          </div>
+        </section><!-- / .container -->
+
+
+
+        <!-- ========== Number Counters - Dark bg ========== -->
+
+        <div class="number-counters-dark-bg">
+          <div class="container">
+            <div id="counters_min" class="row count-wrapper">
+              
+              <!-- Item 1 -->
+              <div class="col-md-3 mb-sm-100 count-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
+                <span id="count-min-1" class="count-nbr">675</span>
+                <span class="count-text">Projects completed</span>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="col-md-3 mb-sm-100 count-item wow fadeIn" data-wow-duration="1s">
+                <span id="count-min-2" class="count-nbr">1457</span>
+                <span class="count-text">Emails Send</span>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="col-md-3 mb-sm-100 count-item wow fadeIn" data-wow-duration="1s">
+                <span id="count-min-3" class="count-nbr">471</span>
+                <span class="count-text">Pixels created</span>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="col-md-3 count-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
+                <span id="count-min-4" class="count-nbr">753</span>
+                <span class="count-text">Happy clients</span>
+              </div>
+
+            </div><!-- / .row -->
+          </div><!-- / .container -->
+        </div><!-- / .number-counters -->
+
+
+
+        <!-- ========== Team - 3 columns ========== -->
+
+        <div class="gray-bg">
+          <section class="container section team-3col">
+            <div class="row">
+              
+              <header class="sec-heading">
+                <h2>Meet the team</h2>
+                <span class="subheading">We are creative professionals</span>
+              </header>
+
+
+              <!-- Member 1 -->
+              <div class="col-lg-4 col-md-6 mb-sm-50">
+                <div class="t-item wow fadeIn" data-wow-duration="1s">
+
+                  <!-- Image -->
+                  <div class="t-image">
+                    <img src="assets/images/team-1.jpg" alt="Team Member" class="img-responsive">
+                    <div class="t-description">
+                      <div class="content-wrapper">
+                        <h4 class="h-alt">Hello!</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Info -->
+                  <div class="t-info">
+                    <h4 class="t-name">Philip Lee</h4>
+                    <span class="t-role">CEO &amp; Founder</span>
+                    <ul class="social-links">
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                  </div>
+
+                </div><!-- / .t-item -->
+              </div><!-- / .col-md-4 -->
+
+
+              <!-- Member 2 -->
+              <div class="col-lg-4 col-md-6 mb-sm-50">
+                <div class="t-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
+
+                  <!-- Image -->
+                  <div class="t-image">
+                    <img src="assets/images/team-2.jpg" alt="Team Member" class="img-responsive">
+                    <div class="t-description">
+                      <div class="content-wrapper">
+                        <h4 class="h-alt">Hello!</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Info -->
+                  <div class="t-info">
+                    <h4 class="t-name">Carol Greene</h4>
+                    <span class="t-role">Art Director</span>
+                    <ul class="social-links">
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                  </div>
+
+                </div><!-- / .t-item -->
+              </div><!-- / .col-md-4 -->
+
+
+              <!-- Member 3 -->
+              <div class="col-lg-4 col-md-6 mb-sm-50">
+                <div class="t-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
+
+                  <!-- Image -->
+                  <div class="t-image">
+                    <img src="assets/images/team-3.jpg" alt="Team Member" class="img-responsive">
+                    <div class="t-description">
+                      <div class="content-wrapper">
+                        <h4 class="h-alt">Hello!</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Info -->
+                  <div class="t-info">
+                    <h4 class="t-name">Tyler Owens</h4>
+                    <span class="t-role">Lead Designer</span>
+                    <ul class="social-links">
+                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                  </div>
+
+                </div><!-- / .t-item -->
+              </div><!-- / .col-md-4 -->
+
+
+            </div><!-- / .row -->
+          </section><!-- / .contianer -->
+        </div><!-- / .gray-bg -->
+
+
+
+        <!-- ========== Circle Counters Minimal ========== -->
+
+        <div id="skillsCirclesMin" class="circles-counters-dark-bg">
+          <div class="container">
+            <div id="counters-min" class="row count-wrapper">
+              
+              <!-- Item 1 -->
+              <div class="col-sm-6 col-lg-3 circle-item wow zoomIn" data-wow-duration=".6s" data-wow-delay=".3s">
+                <div class="chart" data-percent="75"><span class="circle-icon linea-basic-gear"></span></div>
+                <span class="circle-text">Web Development</span>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="col-sm-6 col-lg-3 circle-item wow zoomIn" data-wow-duration=".6s">
+                <div class="chart" data-percent="75"><span class="circle-icon linea-basic-display"></span></div>
+                <span class="circle-text">Web Design</span>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="col-sm-6 col-lg-3 circle-item wow zoomIn" data-wow-duration=".6s">
+                <div class="chart" data-percent="75"><span class="circle-icon linea-basic-photo"></span></div>
+                <span class="circle-text">Photography</span>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="col-sm-6 col-lg-3 circle-item wow zoomIn" data-wow-duration=".6s" data-wow-delay=".3s">
+                <div class="chart" data-percent="75"><span class="circle-icon linea-basic-star"></span></div>
+                <span class="circle-text">Marketing</span>
+              </div>
+
+            </div><!-- / .row -->
+          </div><!-- / .container -->
+        </div><!-- / .circles-counters -->
+
+
+
+        <!-- ========== Services ========== -->
+
+        <div class="gray-bg">
+          <section id="services" class="container ft-cards">
+            <div class="row section">
+
+              <header class="sec-heading">
+                <h2>What we do</h2>
+                <span class="subheading">Lorem ipsum dolor sit amet, consectetur</span>
+              </header>
+              
+              <!-- Item 1 -->
+              <div class="col-lg-4 col-md-6 mb-sm-50">
+                <div class="ft-item wow fadeInUp" data-wow-duration="1s">
+                  <span class="linea-ecommerce-diamond"></span>
+                  <h4>Expert UX/UI Design</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur elit adipisicing , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimv</p>
+                  <a href="#">Learn more <span class="linea-arrows-slim-right"></span></a>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="col-lg-4 col-md-6 mb-sm-50">
+                <div class="ft-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                  <span class="linea-basic-display"></span>
+                  <h4>Web Development</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur elit adipisicing , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimv</p>
+                  <a href="#">Learn more <span class="linea-arrows-slim-right"></span></a>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="col-lg-4 col-md-6 mb-sm-50">
+                <div class="ft-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                  <span class="linea-basic-life-buoy"></span>
+                  <h4>25/7 Support</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur elit adipisicing , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimv</p>
+                  <a href="#">Learn more <span class="linea-arrows-slim-right"></span></a>
+                </div>
+              </div>
+
+            </div><!-- / .row -->
+          </section>
+        </div><!-- / .gray-bg -->
+
+
+
+        <!-- ========== Feature - Steps Numbers ========== -->
+
+        <section class="container ft-steps-numbers">
+            <div class="row section">
+
+              <header class="sec-heading ws-s">
+                <h2>Our work process</h2>
+                <span class="subheading">Lorem ipsum dolor sit amet, consectetur</span>
+              </header>
+              
+              <!-- Step 1 -->
+              <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="1s">
+                <span class="ft-nbr">01</span>
+                <h4>Design</h4>
+                <p>Lariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
+                <span class="ft-nbr">02</span>
+                <h4>Develop</h4>
+                <p>Lariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="col-lg-4 col-md-6 ft-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
+                <span class="ft-nbr">03</span>
+                <h4>Deploy</h4>
+                <p>Lariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
+              </div>
+
+            </div><!-- / .row -->
+            
+            <!-- CTA Button -->
+            <div class="row ws-m">
+              <div class="text-center">
+                <a href="#contact" class="btn">Get a free quote</a>
+              </div>
+            </div><!-- / .row -->
+
+        </section><!-- / .container -->
+
+
+
+        <!-- ========== Featured Projects ========== -->
+
+        <div id="portfolio" class="container-fluid ft-hover-item">
+          <div class="row">
+            
+            <!-- Item 1 -->
+            <div class="ft-item ft-1 col-md-6">
+              <div class="bg-overlay">
+
+                <div class="content-wrapper">
+                  <a href="pages/portfolio/portfolio-single-1.html"><h3>Branding Identity</h3></a>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod tempor incididunt ut labore</p>
+                  <a href="pages/portfolio/portfolio-single-1.html" class="btn-ghost btn-ghost-light ft-button">View Project</a>
+                </div>
+
+              </div><!-- / .bg-overlay -->
+            </div><!-- / .ft-item -->
+
+            <!-- Item 2 -->
+            <div class="ft-item ft-2 col-md-6">
+              <div class="bg-overlay">
+
+                <div class="content-wrapper">
+                  <a href="pages/portfolio/portfolio-single-1.html"><h3>Photography</h3></a>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod tempor incididunt ut labore</p>
+                  <a href="pages/portfolio/portfolio-single-1.html" class="btn-ghost btn-ghost-light ft-button">View Project</a>
+                </div>
+
+              </div><!-- / .bg-overlay -->
+            </div><!-- / .ft-item -->
+
+          </div><!-- / .row -->
+        </div><!-- / .container-fluid -->
+
+        
+
+        <!-- ========== Portfolio Full Width - 4 Columns ========== -->
+
+        <section class="container-fluid portfolio-layout portfolio-columns-fw">
+          <div class="row">
+            <header class="sec-heading">
+              <h2>Some of our project</h2>
+              <span class="subheading">Lorem ipsum dolor sit amet consectetur adipisicing</span>
+            </header>
+          </div><!-- / .row -->
+          
+          <!-- Filters -->
+          <div class="row">
+            <ul id="pfolio-filters" class="portfolio-filters">
+              <li class="active"><a href="#" data-filter="*">All</a></li>
+              <li><a href="#" data-filter=".webdesing">Webdesign</a></li>
+              <li><a href="#" data-filter=".print">Print</a></li>
+              <li><a href="#" data-filter=".photo">Photography</a></li>
             </ul>
-        </div>
-    {% endblock %}
+          </div>
 
-    {% block main_content %}
-          <!-- ===============================================-->
-          <!--    Main Content-->
-          <!-- ===============================================-->
-          <main class="main min-vh-100" id="top">
+          <div class="row">
+            <div id="pfolio">
 
-            <!-- ============================================-->
-            <!-- Preloader ==================================-->
-            <div class="preloader" id="preloader">
-              <div class="loader">
-                <div class="line-scale-pulse-out-rapid">
-                  <div> </div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div> </div>
+              <!-- Item 1 -->
+              <div class="col-md-4 portfolio-item print">
+                <div class="p-wrapper hover-light">
+                  <img src="assets/images/project-1.1.jpg" alt="Project Example">
+                  <div class="p-hover">
+                    <div class="p-content">
+                      <h4>Project Name</h4>
+                      <h6 class="subheading">Sub heading for the project</h6>
+                    </div>
+                  </div>
+                  <a href="assets/images/project-1.1.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
                 </div>
+              </div><!-- / .portfolio-item -->
+
+              <!-- Item 2 -->
+              <div class="col-md-4 portfolio-item webdesing photo">
+                <div class="p-wrapper hover-light">
+                  <img src="assets/images/project-1.2.jpg" alt="Project Example">
+                  <div class="p-hover">
+                    <div class="p-content">
+                      <h4>Project Name</h4>
+                      <h6 class="subheading">Sub heading for the project</h6>
+                    </div>
+                  </div>
+                  <a href="assets/images/project-1.2.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                </div>
+              </div><!-- / .portfolio-item -->
+
+              <!-- Item 3 -->
+              <div class="col-md-4 portfolio-item photo print">
+                <div class="p-wrapper hover-light">
+                  <img src="assets/images/project-1.3.jpg" alt="Project Example">
+                  <div class="p-hover">
+                    <div class="p-content">
+                      <h4>Project Name</h4>
+                      <h6 class="subheading">Sub heading for the project</h6>
+                    </div>
+                  </div>
+                  <a href="assets/images/project-1.3.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                </div>
+              </div><!-- / .portfolio-item -->
+
+              <!-- Item 4 -->
+              <div class="col-md-4 portfolio-item webdesing print">
+                <div class="p-wrapper hover-light">
+                  <img src="assets/images/project-1.7.jpg" alt="Project Example">
+                  <div class="p-hover">
+                    <div class="p-content">
+                      <h4>Project Name</h4>
+                      <h6 class="subheading">Sub heading for the project</h6>
+                    </div>
+                  </div>
+                  <a href="assets/images/project-1.7.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                </div>
+              </div><!-- / .portfolio-item -->
+
+              <!-- Item 5 -->
+              <div class="col-md-4 portfolio-item webdesing">
+                <div class="p-wrapper hover-light">
+                  <img src="assets/images/project-1.10.jpg" alt="Project Example">
+                  <div class="p-hover">
+                    <div class="p-content">
+                      <h4>Project Name</h4>
+                      <h6 class="subheading">Sub heading for the project</h6>
+                    </div>
+                  </div>
+                  <a href="assets/images/project-1.10.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                </div>
+              </div><!-- / .portfolio-item -->
+
+              <!-- Item 6 -->
+              <div class="col-md-4 portfolio-item photo print webdesing">
+                <div class="p-wrapper hover-light">
+                  <img src="assets/images/project-1.6.jpg" alt="Project Example">
+                  <div class="p-hover">
+                    <div class="p-content">
+                      <h4>Project Name</h4>
+                      <h6 class="subheading">Sub heading for the project</h6>
+                    </div>
+                  </div>
+                  <a href="assets/images/project-1.6.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                </div>
+              </div><!-- / .portfolio-item -->
+
+            </div><!-- / #pfolio -->
+          </div><!-- / .row -->
+        </section><!-- / .portfolio-columns-fw -->
+
+
+
+        <!-- ========== CTA - Contact Link ========== -->
+
+        <div class="cta-link cta-dark">
+          <div class="bg-overlay">
+            
+            <div class="cta-wrapper">
+              <h3 class="h-alt wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s">See what we can do for you</h3>
+              <a href="#contact" class="btn btn-light btn-large wow fadeIn" data-wow-delay=".3s" data-wow-duration="1s">Get in touch</a>
+            </div>
+
+          </div>
+        </div><!-- / .dark-bg .cta-link -->
+
+
+
+        <!-- ========== Testimonials ========== -->
+        
+        <div id="testimonials" class="gray-bg">
+          <section class="container testimonials-3col">
+
+            <div class="row section">
+
+              <header class="sec-heading">
+                <h2>What people say about us</h2>
+                <span class="subheading">Read some of the testimonials from our amazing clients</span>
+              </header>
+              
+              <!-- Item 1 -->
+              <div class="col-md-4 mb-sm-50">
+                <div class="t-item wow fadeIn" data-wow-duration="1s">
+                  <img src="assets/images/avatar-1.png" alt="Testimonial">
+                  <blockquote>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae</p>
+                    <footer>
+                      <cite>by Julian Schmitz<span>Google</span></cite>
+                    </footer>
+                  </blockquote>
+                  <span class="et-quote t-icon"></span>
+                </div><!-- / .t-item -->
+              </div><!-- / .col-md-4 -->
+
+              <!-- Item 2 -->
+              <div class="col-md-4 mb-sm-50">
+                <div class="t-item wow fadeIn"  data-wow-duration="1s" data-wow-delay=".3s">
+                  <img src="assets/images/avatar-2.png" alt="Testimonial">
+                  <blockquote>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae</p>
+                    <footer>
+                      <cite>by Cecilia Acosta<span>Apple</span></cite>
+                    </footer>
+                  </blockquote>
+                  <span class="et-quote t-icon"></span>
+                </div><!-- / .t-item -->
+              </div><!-- / .col-md-4 -->
+
+              <!-- Item 3 -->
+              <div class="col-md-4">
+                <div class="t-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
+                  <img src="assets/images/avatar-3.png" alt="Testimonial">
+                  <blockquote>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae</p>
+                    <footer>
+                      <cite>by Gerald Pena<span>Facebook</span></cite>
+                    </footer>
+                  </blockquote>
+                  <span class="et-quote t-icon"></span>
+                </div><!-- / .t-item -->
+              </div><!-- / .col-md-4 -->
+
+            </div><!-- / .row -->
+          </section><!-- / .container -->
+        </div><!-- / .gray-bg -->
+
+
+
+        <!-- ========== Clients List - Dark ========== -->
+
+        <div class="dark-bg">
+          <div class="container">
+            <div class="row">
+              <div class="ws-s"></div>
+              <ul class="t-clients clients-slider ws-s">
+                <li><a href="#"><img src="assets/images/brand-1.png" alt="Client"></a></li>
+                <li><a href="#"><img src="assets/images/brand-2.png" alt="Client"></a></li>
+                <li><a href="#"><img src="assets/images/brand-3.png" alt="Client"></a></li>
+                <li><a href="#"><img src="assets/images/brand-4.png" alt="Client"></a></li>
+                <li><a href="#"><img src="assets/images/brand-5.png" alt="Client"></a></li>
+                <li><a href="#"><img src="assets/images/brand-2.png" alt="Client"></a></li>
+              </ul><!-- / .t-clients -->
+            </div><!-- / .row -->
+          </div><!-- / .container -->
+        </div><!-- / .dark-bg -->
+
+
+
+        <!-- ========== Blog Preview ========== -->
+
+        <div class="gray-bg">
+          <section id="blog" class="section container blog-columns blog-preview">
+            <div class="row">
+              
+              <header class="sec-heading">
+                <h2>Latest from our blog</h2>
+                <span class="subheading">Check out our blog to see what were up to</span>
+              </header>
+
+              
+              <!-- Blog Post 1 -->
+              <div class="col-lg-4 col-md-6 mb-sm-50">
+                <div class="blog-post wow fadeIn" data-wow-duration="2s">
+
+                  <!-- Image -->
+                  <a href="pages/blog/blog-post.html" class="post-img"><img src="assets/images/blog-post-img-1.3.jpg" alt="Blog Post 1"></a>
+
+                  <div class="bp-content">
+                    
+                    <!-- Meta data -->
+                    <div class="post-meta">
+                      <a href="#" class="post-date">
+                        <i class="fa fa-calendar-o"></i>
+                        <span>August 01.2015</span>
+                      </a>
+                      <a href="#" class="post-comments">
+                        <i class="fa fa-comments-o"></i>
+                        <span>12</span>
+                      </a>
+                    </div><!-- / .meta -->
+
+                    <!-- Post Title -->
+                    <a href="pages/blog/blog-post.html" class="post-title"><h4>Blog Post Title</h4></a>
+
+                    <!-- Blurb -->
+                    <p>Lorem ipsum dolor sit amet, tempor consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua. Ut enim ad ...</p>
+
+                    <!-- Link -->
+                    <a href="pages/blog/blog-post.html" class="btn btn-small">Read More</a>
+
+                  </div><!-- / .bp-content -->
+
+                </div><!-- / .blog-post -->
+              </div><!-- / .col-lg-4 -->
+
+
+              <!-- Blog Post 2 -->
+              <div class="col-lg-4 col-md-6 mb-sm-50">
+                <div class="blog-post wow fadeIn" data-wow-duration="2s" data-wow-delay=".3s">
+
+                  <!-- Image -->
+                  <a href="pages/blog/blog-post.html" class="post-img"><img src="assets/images/blog-post-img-1.4.jpg" alt="Blog Post 1"></a>
+
+                  <div class="bp-content">
+                    
+                    <!-- Meta data -->
+                    <div class="post-meta">
+                      <a href="#" class="post-date">
+                        <i class="fa fa-calendar-o"></i>
+                        <span>August 01.2015</span>
+                      </a>
+                      <a href="#" class="post-comments">
+                        <i class="fa fa-comments-o"></i>
+                        <span>12</span>
+                      </a>
+                    </div><!-- / .meta -->
+
+                    <!-- Post Title -->
+                    <a href="pages/blog/blog-post.html" class="post-title"><h4>Blog Post Title</h4></a>
+
+                    <!-- Blurb -->
+                    <p>Lorem ipsum dolor sit amet, tempor consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua. Ut enim ad ...</p>
+
+                    <!-- Link -->
+                    <a href="pages/blog/blog-post.html" class="btn btn-small">Read More</a>
+
+                  </div><!-- / .bp-content -->
+
+                </div><!-- / .blog-post -->
+              </div><!-- / .col-lg-4 -->
+
+              
+              <!-- Blog Post 3 -->
+              <div class="col-lg-4 col-md-6">
+                <div class="blog-post wow fadeIn" data-wow-duration="2s" data-wow-delay=".6s">
+
+                  <!-- Image -->
+                  <a href="pages/blog/blog-post.html" class="post-img"><img src="assets/images/blog-post-img-1.6.jpg" alt="Blog Post 1"></a>
+
+                  <div class="bp-content">
+                    
+                    <!-- Meta data -->
+                    <div class="post-meta">
+                      <a href="#" class="post-date">
+                        <i class="fa fa-calendar-o"></i>
+                        <span>August 01.2015</span>
+                      </a>
+                      <a href="#" class="post-comments">
+                        <i class="fa fa-comments-o"></i>
+                        <span>12</span>
+                      </a>
+                    </div><!-- / .meta -->
+
+                    <!-- Post Title -->
+                    <a href="pages/blog/blog-post.html" class="post-title"><h4>Blog Post Title</h4></a>
+
+                    <!-- Blurb -->
+                    <p>Lorem ipsum dolor sit amet, tempor consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua. Ut enim ad ...</p>
+
+                    <!-- Link -->
+                    <a href="pages/blog/blog-post.html" class="btn btn-small">Read More</a>
+
+                  </div><!-- / .bp-content -->
+
+                </div><!-- / .blog-post -->
+              </div><!-- / .col-lg-4 -->
+
+
+            </div><!-- / .row -->
+          </section><!-- / .container -->
+        </div><!-- / .gray-bg -->
+
+
+
+        <!-- ========== CTA - Newsletter Signup ========== -->
+
+        <div class="cta-newsletter cta-dark">
+          <div class="bg-overlay">
+            <div class="cta-wrapper">
+
+              <h3 class="cta-lead h-alt wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s">Join our newsletter</h3>
+
+              <form class="mc-ajax mc-form subscribe-form" _lpchecked="1">
+
+                <!-- Email -->
+                <input type="email" name="EMAIL" placeholder="Your email address" id="mc-email" class="wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s" >
+                
+                <!-- Send Button -->
+                <input type="submit" name="subscribe" value="Join Us" class="btn btn-light btn-large wow fadeInUp mc-send-btn" data-wow-delay=".1s" data-wow-duration="1s">
+
+                <!-- Info (uncomment this for extra info) -->
+                <!-- <label for="mc-email" class="mc-info"></label> -->
+
+                <!-- Ajax message -->
+                <div class="subscribe-result"></div>
+                
+              </form>
+
+            </div><!-- / .cta-wrapper -->
+          </div><!-- / .bg-overlay -->
+        </div><!-- / .cta-newsletter -->
+
+
+
+        <!-- ========== Footer Contact ========== -->
+        
+        <footer id="contact" class="footer-contact">
+          <div class="container-fluid">
+            <div class="row">
+
+              <!-- Map and address -->
+              <div class="col-lg-6 no-gap contact-info">
+
+                <!-- Show Info Button -->
+                <a href="#" class="show-info-link"><i class="fa fa-info"></i>Show info</a>
+
+                <div id="map-canvas" class="footer-map"></div>
+
+                <address class="contact-info-wrapper">
+                  <ul>
+                    <!-- Address -->
+                    <li class="contact-group">
+                      <span class="adr-heading">Address</span>
+                      <span class="adr-info">100 Street, Il, US</span>
+                    </li>
+                    <!-- Email -->
+                    <li class="contact-group">
+                      <span class="adr-heading">Email</span>
+                      <span class="adr-info">sayhello@email.com</span>
+                    </li>
+                  </ul>
+                  <ul>
+                    <!-- Phone -->
+                    <li class="contact-group">
+                      <span class="adr-heading">Phone</span>
+                      <span class="adr-info">+ 123 4567 890</span>
+                    </li>
+                    <!-- Mobile -->
+                    <li class="contact-group">
+                      <span class="adr-heading">Mobile</span>
+                      <span class="adr-info">+ 123 4567 890</span>
+                    </li>
+                  </ul>                  
+                  
+                  <a href="#" class="show-map"><span class="linea-basic-geolocalize-05"></span>show on map</a>
+                </address>
+
+              </div><!-- / .col-lg-6 -->
+
+
+              <!-- Contact Form -->
+              <div class="col-lg-6 no-gap section contact-form">
+                <header class="sec-heading">
+                  <h2>Contact</h2>
+                  <span class="subheading">Lorem ipsum dolor sit amet</span>
+                </header>
+
+                <form action="assets/contact-form/contact-form.php" method="POST" class="form-ajax wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+
+                  <!-- Name -->
+                  <div class="form-group">
+                    <input type="text" name="name" id="name-contact-1" class="form-control validate-locally" placeholder="Enter your name">
+                    <label for="name-contact-1">Name</label>
+                    <span class="pull-right alert-error"></span>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="form-group">
+                    <input type="email" name="email" id="email-contact-1" class="form-control validate-locally" placeholder="Enter your email">
+                    <label for="email-contact-1">Email</label>
+                    <span class="pull-right alert-error"></span>
+                  </div>
+
+                  <!-- Message -->
+                  <div class="form-group">
+                    <textarea class="form-control" name="message" id="message-contact-1" rows="5" placeholder="Your Message"></textarea>
+                    <label for="message-contact-1">Message</label>
+                  </div>
+                  <input type="submit" class="btn pull-right" value="Send Message">
+
+                  <!-- Ajax Message -->
+                  <div class="ajax-message col-md-12 no-gap"></div>
+
+                </form>
+              </div><!-- / .col-lg-6 -->
+
+            </div><!-- / .row -->
+          </div><!-- / .container-fluid -->
+
+
+          <!-- Social Links -->
+          <div class="dark-bg">
+            <div class="container footer-social-links">
+              <div class="row">
+                
+                <ul>
+                  <li><a href="#">facebook</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Dribbble</a></li>
+                  <li><a href="#">Behance</a></li>
+                </ul>
+
               </div>
-            </div><!-- ============================================-->
-            <!-- End of Preloader ===========================-->
-            <!-- ============================================-->
-            <!-- <section> begin ============================-->
-            <section class="py-0 overflow-hidden bg-white" data-zanim-timeline='{"delay";:0.4}'>
-              <div class="container-fluid">
-                <div class="devices-wrapper">
-                  <div class="macbook-1" data-zanim-xs='{"delay":0.5,"animation":slide-left,"duration":1.5}' style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="3" src="{% get_media_prefix %}{{ top_page.macbook_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
-                  <div class="ipad--l-1" data-zanim-xs='{"delay":0.5,"animation":slide-left,"duration":1.5}'style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="3.8" src="{% get_media_prefix %}{{ top_page.ipad_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
-                  <div class="iphone-1" data-zanim-xs='{"delay":0.5,"animation":slide-left,"duration":1.5}' style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="4.8" src="{% get_media_prefix %}{{ top_page.iphone_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
-                  <div class="ipad--l-2" data-zanim-xs= '{"delay":0.5,"animation":slide-left,"duration":1.5}' style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="3.4" src="{% get_media_prefix %}{{top_page.ipad_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
-                  <div class="iphone-2" data-zanim-xs='{"delay":0.5,"animation":slide-left,"duration":1.5}' style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="4" src="{% get_media_prefix %}{{ top_page.iphone_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
-                  <div class="macbook-2" data-zanim-xs='{"delay":0.5,"animation":slide-left,"duration":1.5}'  style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="5" src="{% get_media_prefix %}{{ top_page.macbook_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
-                  <div class="ipad--l-3" data-zanim-xs='{"delay":0.5,"animation":slide-left,"duration":1.5}'  style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="3.7" src="{% get_media_prefix %}{{top_page.ipad_image}}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
-                  <div class="ipad--p-1" data-zanim-xs='{"delay":0.5,"animation":slide-left,"duration":1.5}'  style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="4.8" src="{% get_media_prefix %}{{ top_page.ipad_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
-                  <div class="iphone-3" data-zanim-xs='{"delay":0.5,"animation":slide-left,"duration":1.5}'  style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="3" src="{% get_media_prefix %}{{ top_page.iphone_image  }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
-                  <div class="iphone-4" data-zanim-xs='{"delay":0.5,"animation":slide-left,"duration":1.5}'  style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="3" src="{% get_media_prefix %}{{ top_page.iphone_image  }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
-                  <div class="iphone--l-1" data-zanim-xs='{"delay":0.5,"animation":slide-left,"duration":1.5}'  style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="2" src="{% get_media_prefix %}{{top_page.macbook_image  }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
+            </div><!-- / .container -->
+          </div><!-- / .dark-bg -->
+
+
+          <!-- Copyright -->
+          <div class="copyright">
+            <div class="container">
+              <div class="row">
+                
+                <div class="col-md-6">
+                  <small>&copy; 2015 Definity. Made by <a class="no-style-link" href="http://themeforest.net/user/octarinethemes" target="_blank">OctarineThemes</a></small>
                 </div>
-                <div class="row py-8 min-vh-100 align-items-center">
-                  <div class="col-md-auto px-md-4 ps-md-8">
 
-                    <h1 class="display-4 fs-2 fs-sm-4 fs-md-5">
-                      <span class="overflow-hidden d-inline-block pb-2">
-                        <span class="d-inline-block" data-zanim-xs='{"delay":1}' style="transform: translate(0px, 0px); opacity: 1;">{{ top_page.company_name}}</span>
-                      </span>
-                    </h1>
-
-                    <div class="overflow-hidden">
-                      <p class="mt-3 mt-sm-4 font-sans-serif lead" data-zanim-xs='{"delay":1.2}' style="transform: translate(0px, 0px); opacity: 1;">{{ top_page.company_slogan}}</p>
-                    </div>
-
-                    <div class="mt-3 mt-sm-5">
-                      <a class="btn btn-dark btn-sm me-2 my-2" href="{% url 'contact-us' %}?init=True" data-offset="60" data-zanim-xs='{"delay":1.3}' style="transform: translate(0px, 0px); opacity: 1;">Contact Us</a>
-                        <a class="btn btn-outline-dark btn-sm my-2" href="" target="_blank" data-zanim-xs='{"delay":1.3}'>Download Flyers</a>
-
-                    </div>
-                  </div>
+                <div class="col-md-6">
+                  <small><a href="#page-top" class="pull-right to-the-top">To the top<i class="fa fa-angle-up"></i></a></small>
                 </div>
-              </div>
 
-            </section>
-            <!-- <section> close ============================--><!-- ============================================-->
+              </div><!-- / .row -->
+            </div><!-- / .container -->
+          </div><!-- / .copyright -->
+        </footer><!-- / .footer-contact -->
 
-            <!-- ============================================-->
-            <!-- <section> begin ============================-->
-            <section class="py-6 py-md-8 " id="defaultWhyUs" >
-              <div class="container">
-                <div class="row flex-center">
-                  <div class="col-12 mb-2 mb-lg-5 text-center">
-                    <h2 class="fs-3 fs-sm-4"><span class="text-decoration-underline" data-zanim-xs='{"delay":0.3}' data-zanim-trigger="scroll">why matromatic?</span></h2>
-                  </div>
-                </div>
-                <div class="row flex-center">
-                  <div class="col-sm-8 col-lg-4 text-lg-end mt-5 mt-lg-0 pe-lg-3 pe-xl-4">
-                    <div class="overflow-hidden">
-                      <p class="fs-italic lead" data-zanim-xs='{"delay";:0.2}' data-zanim-trigger="scroll">{{content.company_description}}</p>
-                    </div>
-                  </div>
-                  <div class="col-sm-8 col-lg-4 mt-4 mt-lg-0 px-lg-4"><img class="w-100 rounded" src="{% get_media_prefix %}{{ content.why_us_photo }}" alt="" data-zanim-xs='{"animation":"zoom-out","delay":0.1}' data-zanim-trigger="scroll" /></div>
-                  <div class="col-sm-8 col-lg-4 mt-5 mt-lg-0 ps-lg-3 ps-xl-4">
-                    <div class="overflow-hidden">
-                      <h4 class="mb-3" data-zanim-xs='{"delay":0.2}' data-zanim-trigger="scroll"></h4>
-                    </div>
-                    <div class="overflow-hidden">
-                      <p data-zanim-xs='{"delay":0.3}' data-zanim-trigger="scroll">{{content.why_us_raison}}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end of .container-->
-            </section>
-            <!-- <section> close ============================-->
-            <!-- ============================================-->
+    
 
-            <!-- ============================================-->
-            <!-- <section> begin ============================-->
-            <section class="text-center py-8 py-md-11 overflow-hidden" id="defaultVideo">
-              <div class="bg-holder" style="background-image:url({% get_media_prefix %}{{ content.main_background_image }});" data-parallax="" data-rellax-percentage="0.5" data-rellax-speed="-3"></div>
-              <!--/.bg-holder-->
-              <div class="container-fluid">
-                <a class="text-white" href="#!" data-bigpicture='{"ytSrc":"{{ content.why_us_video_src }}"}'>
-                    <svg class="mx-auto d-block" width="100" height="100" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 274.19 274.19" data-zanim-svg='{"duration":2,"ease":"CubicBezier"}' data-zanim-svg-trigger="scroll">
-                    <defs>
-                      <style>
-                        .play-path {
-                          fill: none;
-                          stroke: #ffffff;
-                          stroke-linecap: round;
-                          stroke-linejoin: round;
-                          stroke-width: 12px;
-                        }
-                      </style>
-                    </defs>
-                    <g>
-                      <path class="play-path" d="M208.31,29.4A129.12,129.12,0,1,1,137.1,8m-1.48,170.53L199.94,137,104.07,79.46v113"></path>
-                    </g>
-                  </svg>
-                    <span class="h4 mt-3 text-white" data-zanim-xs='{"from":{"letter-spacing":"0.2em","opacity":0},"to":{"letter-spacing":0,"opacity":1},"delay":0.8}' data-zanim-trigger="scroll">watch the reel</span>
-              </a>
-              </div>
-              <!-- end of .container-->
-            </section>
-            <!-- <section> close ============================-->
-            <!-- ============================================-->
+        <!-- ========== Scripts ========== -->
 
-            <!-- our services begin-->
-            <section id="defaultServices">
-              <div class="container">
-                <div class="row justify-content-center gy-4 gx-lg-4">
-                  <div class="col-12 mb-3 mb-md-5 text-center">
-                    <h2 class="fs-3 fs-sm-4">
-                      <span class="text-decoration-underline">powerful inside.</span>
-                    </h2>
-                  </div>
-                  {% for service in services%}
-                      <div class="col-lg-5">
-                           <div class="d-flex" id="bootstrap5" data-zanim-trigger="scroll" data-zanim-timeline="{}">
-                              <div class="overflow-hidden">
-                                <img class="me-3 me-sm-4" src="{% get_media_prefix %}{{ service.icon }}" width="50" alt="" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' /></div>
-                              <div class="flex-1">
-                                <div class="overflow-hidden">
-                                  <h4 class="mb-2" data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{service.service_title}}</h4>
-                                </div>
-                                <div class="overflow-hidden">
-                                  <p data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{service.service_description}}</p>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                  {% endfor %}
+        <script src="{% static 'home/assets/js/vendor/jquery-2.1.4.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/google-fonts.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/jquery.easing.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/jquery.waypoints.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/bootstrap.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/bootstrap-hover-dropdown.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/smoothscroll.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/jquery.localScroll.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/jquery.scrollTo.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/jquery.stellar.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/jquery.parallax.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/slick.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/jquery.easypiechart.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/countup.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/isotope.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/wow.min.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/jquery.ajaxchimp.js' %}"></script>
+        <script src="{% static 'home/assets/js/vendor/animDots.js' %}"></script>
 
-                </div>
-              </div><!-- end of .container-->
-            </section>
-            <!--our services end-->
+        <!-- Google Maps -->
+        <script src="assets/js/gmap.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOcd7o0W0r846FC_GoHSK56xeAvP8fV4s"></script>
 
-            <!-- ============================================-->
-            <!-- our process begin-->
-            <section class="border-top" id="defaultProcess">
-              <div class="container">
-                <div class="row justify-content-center text-center mb-6">
-                  <div class="col-lg-6">
-                    <h2 class="fs-3 fs-sm-4 text-decoration-underline mb-3">our process</h2>
-                    <p class="text-500 fst-italic">{{content.our_process_intro}}</p>
-                    <hr class="hr-short mt-5" />
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 ps-lg-7">
-                      <div class="row align-items-end">
-                        <div class="col-lg-6 order-lg-2 text-center">
-                          <img class="img-fluid" src="{% get_media_prefix %}{{ content.step_one_photo }}" alt="" width="400" />
-                        </div>
-                        <div class="col-lg-6 border-lg-start border-lg-bottom pb-lg-8 mt-4 mt-lg-0 mb-8 mb-lg-0">
-                          <div class="process-item ms-6 ms-sm-8 ms-lg-6"><span class="process-item-number">01</span>
-                            <h3>{{content.step_one_title}}</h3>
-                            <p>{{content.step_one_description}}</p>
-                          </div>
-                        </div>
-                     </div>
-                    <div class="row">
-                      <div class="col-lg-6 border-lg-end border-lg-bottom text-center py-lg-8">
-                        <img class="img-fluid" src="{% get_media_prefix %}{{ content.step_tow_photo }}" alt="" width="400" />
-                      </div>
-                      <div class="col-lg-6 mt-4 mb-8 my-lg-8">
-                        <div class="process-item ms-6 ms-sm-8 ms-lg-6"><span class="process-item-number">02</span>
-                          <h3>{{content.step_tow_title}}</h3>
-                           <p>{{content.step_tow_description}}</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-6 order-lg-2 text-center align-self-center">
-                        <img class="img-fluid" src="{% get_media_prefix %}{{ content.step_three_photo }}" alt="" width="400" />
-                      </div>
-                      <div class="col-lg-6 border-lg-start border-lg-bottom py-lg-8 mt-4 mt-lg-0 mb-8 mb-lg-0">
-                        <div class="process-item ms-6 ms-sm-8 ms-lg-6"><span class="process-item-number">03</span>
-                          <h3>{{content.step_three_title}}</h3>
-                          <p>{{content.step_three_description}}</p>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row pb-1">
-                      <div class="col-lg-6 border-lg-end text-center py-lg-8"><img class="img-fluid" src="{% get_media_prefix %}{{ content.step_four_photo }}" alt="" width="400" /></div>
-                      <div class="col-lg-6 align-self-center mt-4 mt-lg-0 mt-lg-8">
-                        <div class="process-item process-item-last ms-6 ms-sm-8 ms-lg-6"><span class="process-item-number">04</span>
-                         <h3>{{content.step_four_title}}</h3>
-                           <p>{{content.step_four_description}}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end of .container-->
-            </section>
-            <!-- <section> close ============================-->
-            <!-- ============================================-->
-
-
-            <!-- ============================================-->
-            <!-- <section> begin ============================-->
-            <section class="py-0" id="defaultCta1">
-              <div class="container">
-                <div class="position-absolute overflow-hidden all-0">
-                  <div class="bg-holder overlay rounded" style="background-image:url({% get_media_prefix %}{{ content.main_background_image }});" data-zanim-trigger="scroll" data-zanim-lg='{"animation":"zoom-out","delay":0}'></div>
-                  <!--/.bg-holder-->
-                </div>
-                <div class="row justify-content-center text-center py-7">
-                  <div class="col-lg-9 position-relative">
-                    <h3 class="fs-2 fs-sm-3 text-light">Have you a project to start, and you do not know how ?</h3>
-                    <p class="lead fst-italic text-white px-lg-7">Matromatic is always ready to help you and to accompany you throughout the course</p><a class="btn btn-outline-light mt-4 btn-sm border-2" href="{% url 'contact-us' %}?init=True">Contact Us</a>
-                  </div>
-                </div>
-              </div>
-              <!-- end of .container-->
-            </section>
-            <!-- <section> close ============================-->
-            <!-- ============================================-->
-
-            <!-- Our performances begin -->
-
-            <!-- ============================================-->
-            <!-- <section> begin ============================-->
-            <section class="text-center" id="defaultProgressbar">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-md-6">
-                    <h2 class="fs-3 fs-sm-4 text-decoration-underline mb-3">performance?</h2>
-                    <p class="text-500 fst-italic">{{content.performance_intro}}</p>
-                  </div>
-                </div>
-                <div class="row align-items-center mt-6">
-
-                  <div class="col-md-6 position-relative">
-                    <div class="progress-circle mb-4" data-progress-circle='{"progress":{{content.performance_record_breaking}},"subText":"<span class=&#39;text-700 pt-2&#39;>{{content.performance_record_detail}}</span>"}'> </div>
-                    <h4>Record Breaking in History</h4>
-                  </div>
-
-                  <div class="col-md-6 ps-md-7 text-start mt-8 mt-md-0">
-                    {% for performance in performances%}
-                    <div class="progress-line me-4 mt-4" data-progress-line='{"progress":{{performance.percentage}},"subText":"{{performance.domain}}"}'></div>
-                    {% endfor %}
-                  </div>
-                </div>
-              </div>
-              <!-- end of .container-->
-            </section>
-            <!-- <section> close ============================-->
-            <!-- ============================================-->
-            <!-- Our performances end -->
-
-            <!-- Our clients begin -->
-            <!-- ============================================-->
-            <!-- <section> begin ============================-->
-            <section class="overflow-hidden py-0" id="defaultCta2">
-              <div class="container">
-                <div class="position-absolute overflow-hidden all-0">
-                  <div class="bg-holder overlay overlay-2 rounded" style="background-image:url({% get_media_prefix %}{{ content.main_background_image }});" data-zanim-trigger="scroll" data-zanim-lg='{"animation":"zoom-out","delay":0}'></div>
-                  <!--/.bg-holder-->
-                </div>
-                <div class="row flex-center text-center py-8">
-                  <div class="col-lg position-relative">
-                    <h1 class="mb-0 text-white">{{content.client_count}}</h1>
-                    <h6 class="text-300 fs-0">happy customers &amp; counting</h6>
-                  </div>
-
-                  <div class="col-lg-7 px-lg-8 mt-6 mt-lg-0 position-relative">
-                    <div class="swiper-container theme-slider position-static" data-swiper='{"autoplay":{"delay":3000},"loop":true,"effect":"slide"}'>
-                      <div class="swiper-wrapper">
-                        {% for client in clients %}
-                        <div class="swiper-slide">
-                           <div class="hoverbox">
-                            <img class="rounded img-fluid" src=" {% get_media_prefix %}{{ client.client_logo}}" alt="" data-zanim-xs='{"animation":"zoom-in""delay":0.1}'>
-                          </div>
-                        </div>
-                        {% endfor %}
-                      </div>
-                      <div class="swiper-nav">
-                        <div class="swiper-button-next me-md-5"></div>
-                        <div class="swiper-button-prev ms-md-5"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end of .container-->
-            </section>
-            <!-- <section> close ============================-->
-            <!-- ============================================-->
-            <!-- Our clients end -->
-
-            <!-- Our partners begin -->
-            <!-- <section> begin ============================-->
-            <section class="text-center" id="defaultPartners">
-              <div class="container">
-                  <div class="row flex-center">
-                    <div class="col-lg-7 col-xl-6">
-                      <h2 class="fs-3 fs-sm-4 text-decoration-underline mb-3">our partners</h2>
-                      <p class="text-500 fst-italic">{{content.partners_intro}}</p>
-                    </div>
-                    <div class="w-100"></div>
-
-                    {% for partner in partners %}
-                        <div class="col-sm-6 col-lg-3 pt-5 pt-xl-7" data-zanim-timeline='{"delay":0.2}' data-zanim-trigger="scroll">
-
-                          <div class="hoverbox">
-                              <img class="logo-grid" src=" {% get_media_prefix %}{{ partner.partner_logo}}" alt="" data-zanim-xs='{"animation":"zoom-in""delay":0.1}'>
-                            </div>
-
-                            <div class="overflow-hidden">
-                              <a href="../pages/profile.html">
-                                <h5 class="fs-0 fw-bold mt-3 mb-1" data-zanim-xs='{"from":{"y":45},"delay":0.2}'>{{ partner.partner_name}}</h5>
-                              </a>
-                            </div>
-
-                        </div>
-                    {% endfor %}
-                </div>
-              </div>
-              <!-- end of .container-->
-            </section>
-            <!-- <section> close ============================-->
-            <!-- Our partners end -->
-
-
-
-            <!-- ============================================-->
-            <!-- <section> begin ============================-->
-            <section class="text-center pt-0 pb-4" id="defaultProjects">
-              <div class="container">
-
-                <div class="row">
-                  <div class="col-12 mb-3 mb-lg-5">
-                    <h2 class="fs-3 fs-sm-4">
-                      <span class="text-decoration-underline">Our projects</span></h2>
-                  </div>
-                  <div class="row justify-content-center">
-                    <div class="col-lg-7">
-                        <p>{{content.projects_intro}}</p>
-                      </div>
-                    <div class="col-lg-12 mb-4 mb-lg-0">
-                      <div class="swiper-container theme-slider" data-swiper='{"spaceBetween":5,"loop":true,"loopedSlides":{{ projects.count}},"thumb":{"spaceBetween":5,"slidesPerView":{{ projects.count}},"loop":true,"freeMode":true,"grabCursor":true,"loopedSlides":{{ projects.count}},"centeredSlides":true,"slideToClickedSlide":true,"watchSlidesVisibility":true,"watchSlidesProgress":true},"slideToClickedSlide":true}'>
-                        <div class="swiper-wrapper">
-                          {% for project in projects%}
-                          <div class="swiper-slide"><img class="img-fluid" src=" {% get_media_prefix %}{{ project.project_photo}}" alt="" /></div>
-                          {% endfor %}
-
-                        </div>
-                        <div class="swiper-nav">
-                          <div class="swiper-button-next"></div>
-                          <div class="swiper-button-prev"></div>
-                        </div>
-                      </div>
-                    </div>
-                   </div>
-
-                </div>
-              </div>
-
-              <!-- end of .container-->
-            </section>
-            <!-- <section> close ============================-->
-            <!-- ============================================-->
-
-          </main>
-          <!-- ===============================================-->
-          <!--    End of Main Content-->
-          <!-- ===============================================-->
-
-    {% endblock %}
-
-
+        <!-- Definity JS -->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

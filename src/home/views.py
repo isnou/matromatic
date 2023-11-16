@@ -77,25 +77,3 @@ def home(request):
     return render(request, url, context)
 
 
-def contact_us(request):
-    if not request.session.get('language', None):
-        request.session['language'] = 'en-us'
-    direction = request.session.get('language')
-
-    url = direction + "/home/contact_us.html"
-    try:
-        top_page = TopPage.objects.get(language='en')
-    except TopPage.DoesNotExist:
-        raise Http404("Top page does not exist")
-
-    try:
-        footer = Footer.objects.get(language='en')
-    except Footer.DoesNotExist:
-        raise Http404("Footer informations do not exist")
-
-    context = {
-        'top_page': top_page,
-        'footer': footer,
-
-    }
-    return render(request, url, context)
