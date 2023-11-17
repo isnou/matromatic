@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Favicon -->
-        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="shortcut icon" href="{% get_media_prefix %}{{ top_page.logo_main }}">
         <!-- Bootstrap -->
         <link rel="stylesheet" href="{% static 'home/assets/styles/vendor/bootstrap.min.css' %}">
         <!-- Fonts -->
@@ -51,7 +51,7 @@
               <span class="icon-bar"></span>
             </button>
             <!-- Logo -->
-            <a class="navbar-brand" href="index.html"><img src="assets/images/logo-light.png" alt="Definity - Logo"></a>
+            <a class="navbar-brand" href="index.html"><img src="{% get_media_prefix %}{{ top_page.logo_main }}"  alt="Definity - Logo"></a>
           </div>
 
           <!-- Navbar Links -->
@@ -81,7 +81,7 @@
               <div class="hero-content-wrapper">
                 <div class="hero-content">
 
-                  <img src="assets/images/hero/ag2-logo.png" alt="Creative Agency Template">
+                  <img src="{% get_media_prefix %}{{ top_page.logo_main }}"  alt="Creative Agency Template">
                   <h1 class="hero-lead">Matro </h1>
                   <br>
                   <h4 class="h-alt hero-secondary">Most innovative solutions for your industry .</h4>
