@@ -35,7 +35,7 @@ def home_manager(request, action):
 
         homes_form = HomeForm()
         main_content_form = MainContentForm()
-        footers_form = FooterForm()
+
         services_form = ServiceForm()
         process_steps_form = ProcessForm()
         clients_form = ClientForm()
@@ -48,7 +48,7 @@ def home_manager(request, action):
             'tab': tab,
             'home': home,
             'main_content': main_content,
-            'footers': footers,
+
             'services': services,
             'process_steps': process_steps,
             'clients': clients,
@@ -58,7 +58,7 @@ def home_manager(request, action):
             'services_form': services_form,
             'homes_form': homes_form,
             'main_content_form': main_content_form,
-            'footers_form': footers_form,
+
             'process_steps_form': process_steps_form,
             'clients_form': clients_form,
             'contacts_form': contacts_form,
