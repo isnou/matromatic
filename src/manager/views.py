@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Home, MainContent, Footer, ContactUs, Service, OurProcess, SocialMedia, Client, Project
+from .models import Home, MainContent, ContactUs, Service, OurProcess, SocialMedia, Client, Project
 from .forms import HomeForm, MainContentForm, FooterForm, ServiceForm, ProcessForm, ClientForm, ContactForm, \
     ProjectForm, SocialMediaForm
 
