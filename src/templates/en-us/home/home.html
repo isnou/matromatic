@@ -112,45 +112,26 @@
               </div><!-- / .container -->
           </div>
         <!-- ========== Feature - Steps Numbers ========== -->
-
-
-
-
-      <section class="container ft-steps-numbers">
-            <div class="row section">
-
-              <header class="sec-heading ws-s">
-                <h2>Notre  processus  de travail</h2>
-                <span class="subheading">{{main_content.our_process_description}}</span>
-              </header>
-
-                {% for process in process_steps%}
-              <!-- Step 3 -->
-              <div class="col-lg-4 col-md-6 ft-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
-                <span class="ft-nbr">01</span>
-                <h4>IDENTIFICATION DES PROBLÈMES</h4>
-                <p>Dans cette on identifie les besoins,
-                    les lacunes ou les opportunités qui nécessitent une action.
-                    Il peut s'agir de problèmes existants à résoudre ou de
-                    nouvelles idées à explorer.{{process.process_description}}</p>
+          <div class="gray-bg">
+              <section class="container ft-steps-numbers ">
+                <div class="row section">
+                  <header class="sec-heading ws-s">
+                    <h2>NOTRE PROCESSUS DE TRAVAIL</h2>
+                    <span class="subheading">{{main_content.our_process_description}}</span>
+                  </header>
+                    {% for process_step  in process_steps %}
+                      <div class="col-lg-6 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="{{process_step.process_number}}s">
+                        <span class="ft-nbr">0{{process_step.process_number}}</span>
+                        <h4>{{process_step.process_title}}</h4>
+                        <p>{{process_step.process_description}}</p>
+                          <br>
+                          <br>
+                      </div><!-- / .row -->
+                    {% endfor %}
               </div>
-                
-
-                {% endfor%}
-
-
-            </div><!-- / .row -->
-
-            <!-- CTA Button -->
-            <div class="row ws-m">
-              <div class="text-center">
-                <a href="#contact" class="btn">Get a free quote</a>
-              </div>
-            </div><!-- / .row -->
-
-        </section><!-- / .container -->
-
-        <section class="container section ft-x">
+              </section><!-- / .container -->
+          </div>
+          <section class="container section ft-x">
               <div class="row">
 
             <header class="sec-heading">
@@ -160,8 +141,10 @@
 
             <!-- Feature 1 -->
             <div class="col-lg-4 wow fadeInLeft" data-wow-duration=".8s" style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInLeft;">
+
               <!-- white space -->
               <div class="ws-m"></div>
+
               <!-- Material right aligned - Item 1 -->
               <div class="col-md-12 no-gap ws-s ft-item ft-material right-align">
                 <div class="ft-content">
@@ -172,6 +155,7 @@
                   <i class="fa fa-hand-peace-o"></i>
                 </div>
               </div><!-- / .ft-item -->
+
               <!-- Material right aligned - Item 2 -->
               <div class="col-md-12 no-gap ws-s ft-item ft-material right-align">
                 <div class="ft-content">
