@@ -112,58 +112,25 @@
               </div><!-- / .container -->
           </div>
         <!-- ========== Feature - Steps Numbers ========== -->
-
-
-
-<section class="container ft-steps-numbers">
-          <div class="row section">
-
-            <!-- Step 1 -->
-            <div class="col-lg-4 col-md-6 mb-sm-100 ft-item">
-              <span class="ft-nbr">01</span>
-              <h4>Identification des problèmes</h4>
-              <p>Lariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="col-lg-4 col-md-6 mb-sm-100 ft-item">
-              <span class="ft-nbr">02</span>
-              <h4>Planification</h4>
-                <p>Une fois les problèmes identifiés, la planification entre en jeu. Cela implique de définir les objectifs du projet, d'identifier les ressources nécessaires (humaines, matérielles, financières), de déterminer les délais et de créer un plan détaillé pour la suite du processus.</p>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="col-lg-4 col-md-6 mb-sm-100 ft-item">
-              <span class="ft-nbr">03</span>
-              <h4>Conception</h4>
-                <p>Au cours de cette étape, les concepteurs et les ingénieurs travaillent à la création d'une solution pour résoudre les problèmes identifiés. Cela peut inclure la conception de systèmes, d'interfaces utilisateur, etc</p>
-            </div>
-
-
-
-              <div class="col-lg-4 col-md-6 mb-sm-100 ft-item">
-              <span class="ft-nbr">04</span>
-              <h4>Déploiement</h4>
-                  <p>Une fois la conception terminée, la solution est prête à être déployée dans l'environnement réel. Cela peut impliquer la mise en œuvre de nouvelles technologies, la configuration de matériel,etc.</p>
-             </div>
-
-            <!-- Step 2 -->
-            <div class="col-lg-4 col-md-6 mb-sm-100 ft-item">
-              <span class="ft-nbr">05</span>
-              <h4>Implémentation</h4>
-                <p>Cette étape concerne la mise en œuvre réelle de la solution conçue. Cela peut inclure le codage et la programmation dans le développement logiciel, l'installation de matériel, la configuration de réseaux, etc.</p>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="col-lg-4 col-md-6 mb-sm-100 ft-item">
-              <span class="ft-nbr">06</span>
-              <h4>test & Evaluation</h4>
-                <p>Avant de déployer pleinement la solution, il est crucial de la tester. Cela permet de s'assurer que toutes les fonctionnalités fonctionnent correctement, de détecter et de corriger les éventuels bugs ou problèmes, et de garantir que la solution répond aux besoins spécifiés.</p>
-            </div>
-
-
-          </div><!-- / .row -->
-        </section>
+          <div class="gray-bg">
+              <section class="container ft-steps-numbers ">
+                <div class="row section">
+                  <header class="sec-heading ws-s">
+                    <h2>NOTRE PROCESSUS DE TRAVAIL</h2>
+                    <span class="subheading">{{main_content.our_process_description}}</span>
+                  </header>
+                    {% for process_step  in process_steps %}
+                      <div class="col-lg-6 col-md-4 mb-sm-100 ft-item wow fadeIn" data-wow-duration="{{process_step.process_number}}s">
+                        <span class="ft-nbr">0{{process_step.process_number}}</span>
+                        <h4>{{process_step.process_title}}</h4>
+                        <p>{{process_step.process_description}}</p>
+                          <br>
+                          <br>
+                      </div><!-- / .row -->
+                    {% endfor %}
+              </div>
+              </section><!-- / .container -->
+          </div>
           <section class="container section ft-x">
               <div class="row">
 
