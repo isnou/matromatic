@@ -31,18 +31,18 @@
         <!-- ========== Hero Cover ========== -->
           <div id="home" class="main-demo-hero">
               <div class="bg-overlay">
-            <!-- Hero Content -->
-              <div class="hero-content-wrapper">
-              <div class="hero-content">
-                <h1 class="hero-lead wow fadeInLeft" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInLeft;"> {{home_page.company_name}}</h1>
-                <h4 class="h-alt hero-subheading wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s" style="visibility: visible; animation-duration: 2s; animation-delay: 0.7s; animation-name: fadeIn;">{{ home_page.company_slogan }}</h4>
-                <a href="#about" class="btn wow fadeIn" data-wow-duration="2s" data-wow-delay="1s" style="visibility: visible; animation-duration: 2s; animation-delay: 1s; animation-name: fadeIn;">À propos</a>
-              </div>
-            </div>
-            <!-- Scroller -->
+                  <!-- Hero Content -->
+                <div class="hero-content-wrapper">
+                    <div class="hero-content">
+                        <h1 class="hero-lead wow fadeInLeft" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInLeft;"> {{home_page.company_name}}</h1>
+                        <h4 class="h-alt hero-subheading wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s" style="visibility: visible; animation-duration: 2s; animation-delay: 0.7s; animation-name: fadeIn;">{{ home_page.company_slogan }}</h4>
+                        <a href="#about" class="btn wow fadeIn" data-wow-duration="2s" data-wow-delay="1s" style="visibility: visible; animation-duration: 2s; animation-delay: 1s; animation-name: fadeIn;">À propos</a>
+                    </div>
+                </div>
+                  <!-- Scroller -->
                   <a href="#about" class="scroller scroller-dark">
-              <span class="linea-basic-magic-mouse"></span>
-            </a>
+                     <span class="linea-basic-magic-mouse"></span>
+                  </a>
               </div><!-- / .bg-overlay -->
           </div>
         <!-- ========== About - Section ========== -->
@@ -114,38 +114,35 @@
         <!-- ========== Feature - Steps Numbers ========== -->
           <div class="gray-bg">
               <section class="container ft-steps-numbers ">
-            <div class="row section">
-              <header class="sec-heading ws-s">
-                <h2>NOTRE PROCESSUS DE TRAVAIL</h2>
-                <span class="subheading">{{main_content.our_process_description}}</span>
-              </header>
-                {% for process_step  in process_steps %}
-                  <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="{{process_step.process_number}}s">
-                    <span class="ft-nbr">0{{process_step.process_number}}</span>
-                    <h4>{{process_step.process_title}}</h4>
-                    <p>{{process_step.process_description}}</p>
-                      <br>
-                      <br>
-
-                  </div><!-- / .row -->
-                {% endfor %}
-            </div>
-        </section><!-- / .container -->
+                <div class="row section">
+                  <header class="sec-heading ws-s">
+                    <h2>NOTRE PROCESSUS DE TRAVAIL</h2>
+                    <span class="subheading">{{main_content.our_process_description}}</span>
+                  </header>
+                    {% for process_step  in process_steps %}
+                      <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="{{process_step.process_number}}s">
+                        <span class="ft-nbr">0{{process_step.process_number}}</span>
+                        <h4>{{process_step.process_title}}</h4>
+                        <p>{{process_step.process_description}}</p>
+                          <br>
+                          
+                      </div><!-- / .row -->
+                    {% endfor %}
+              </div>
+              </section><!-- / .container -->
           </div>
           <section class="container section ft-x">
               <div class="row">
 
             <header class="sec-heading">
               <h2>Pourquoi nous choisir ?</h2>
-              <span class="subheading">Created to work on all mobile devices</span>
+              <span class="subheading">{{main_content.why_us_description}}</span>
             </header>
 
             <!-- Feature 1 -->
             <div class="col-lg-4 wow fadeInLeft" data-wow-duration=".8s" style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInLeft;">
-
               <!-- white space -->
               <div class="ws-m"></div>
-
               <!-- Material right aligned - Item 1 -->
               <div class="col-md-12 no-gap ws-s ft-item ft-material right-align">
                 <div class="ft-content">
@@ -156,7 +153,6 @@
                   <i class="fa fa-hand-peace-o"></i>
                 </div>
               </div><!-- / .ft-item -->
-
               <!-- Material right aligned - Item 2 -->
               <div class="col-md-12 no-gap ws-s ft-item ft-material right-align">
                 <div class="ft-content">
@@ -167,16 +163,6 @@
                   <i class="fa fa-tv"></i>
                 </div>
               </div><!-- / .ft-item -->
-                 <div class="col-md-12 no-gap ws-s ft-item ft-material right-align">
-                <div class="ft-content">
-                  <h5>100% Responsive</h5>
-                  <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius.</p>
-                </div>
-                <div class="ft-icon">
-                  <i class="fa fa-tv"></i>
-                </div>
-              </div><!-- / .ft-item -->
-
             </div><!-- / .col-lg-4 -->
 
             <!-- Center Image -->
@@ -203,18 +189,15 @@
                 <h5>Lots of features</h5>
                 <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius, vero.</p>
               </div><!-- / .ft-item -->
-                 <div class="col-md-12 no-gap ws-s ft-item ft-material">
-                <i class="fa fa-star"></i>
-                <h5>Lots of features</h5>
-                <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius, vero.</p>
-              </div><!-- / .ft-item -->
+
+
 
             </div><!-- / .col-lg-4 -->
 
           </div><!-- / .row -->
           </section>
         <!-- ========== projects Full Width - 4 Columns ========== -->
-           <section class="container-fluid portfolio-layout portfolio-columns-fw">
+          <section class="container-fluid portfolio-layout portfolio-columns-fw">
               <div class="row">
                 <header class="sec-heading">
                   <h2>Nos realisations</h2>
@@ -269,7 +252,7 @@
           <section id="testimonials" class="container section ft-centered ">
               <header class="sec-heading">
                 <h2>Nos clients</h2>
-                <span class="subheading">Read some of the testimonials from our amazing clients</span>
+                <span class="subheading">{{main_content.our_client_description}}</span>
               </header>
 
               <div class="row">
@@ -405,7 +388,7 @@
                 <div class="widget newsletter-widget">
                   <h5 class="header-widget">Newsletter</h5>
 
-                  <form class="mc-form subscribe-form" _lpchecked="1">
+                  <form class="mc-form subscribe-form">
                     <div class="form-group">
 
                       <!-- Email -->
