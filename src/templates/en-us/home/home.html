@@ -123,15 +123,16 @@
                 <h2>Notre  processus  de travail</h2>
                 <span class="subheading">{{main_content.our_process_description}}</span>
               </header>
+                {% for process_step in process_steps%}
 
-                {%for process_step in  process_steps%}
-              <!-- Step 1 -->
-              <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="1s">
-                <span class="ft-nbr">0{{process_step.process_number}}</span>
-                <h4>{{process_step.process_title}}</h4>
-                <p>{{process_step.process_description}}</p>
+              <!-- Step 3 -->
+              <div class="col-lg-4 col-md-6 ft-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
+                <span class="ft-nbr">03</span>
+                <h4>Deploy</h4>
+                <p>Lariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
               </div>
-                {%endfor%}
+
+                {% endfor %}
 
             </div><!-- / .row -->
 
