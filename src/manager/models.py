@@ -94,8 +94,7 @@ class Client(models.Model):
 class ContactUs(models.Model):
     language = models.CharField(max_length=50, blank=True)
     address = models.CharField(max_length=300)
-    phone = PhoneNumberField()
-    mobile = PhoneNumberField(blank=True)
+    phone = PhoneNumberField(blank=True)
     email = models.EmailField(max_length=254)
 
     class Meta:
