@@ -124,6 +124,7 @@
                 <span class="subheading">{{main_content.our_process_description}}</span>
               </header>
 
+                {% for process in process_steps%}
               <!-- Step 3 -->
               <div class="col-lg-4 col-md-6 ft-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
                 <span class="ft-nbr">0{{process_step.process_number}}</span>
@@ -131,6 +132,7 @@
                 <p>{{process_step.process_description}}</p>
               </div>
 
+                {% endfor%}
 
 
             </div><!-- / .row -->
