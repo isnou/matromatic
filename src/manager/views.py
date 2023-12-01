@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Home, MainContent, ContactUs, Service, OurProcess, SocialMedia, Client, Project
-from .forms import HomeForm, MainContentForm, FooterForm, ServiceForm, ProcessForm, ClientForm, ContactForm, \
+from .forms import HomeForm, MainContentForm, ServiceForm, ProcessForm, ClientForm, ContactForm, \
     ProjectForm, SocialMediaForm
 
 
@@ -26,7 +26,6 @@ def home_manager(request, action):
 
         home = Home.objects.all()
         main_content = MainContent.objects.all()
-        footers = Footer.objects.all()
         services = Service.objects.all()
         process_steps = OurProcess.objects.all()
         clients = Client.objects.all()
