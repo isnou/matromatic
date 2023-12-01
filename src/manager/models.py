@@ -63,7 +63,6 @@ class OurProcess(models.Model):
     def __str__(self):
         return self.process_title
 
-
 # ------------------------------ Projects ----------------------------- #
 class Project(models.Model):
     project_type = models.CharField(max_length=100, unique=True)
