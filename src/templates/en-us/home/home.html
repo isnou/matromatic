@@ -378,10 +378,9 @@
                 <div class="widget about-widget">
 
                   <ul class="social-links">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                      {% for social_media in socials_media%}
+                    <li><a href="{{social_media.link}}"><i class="{{social_media.icon}}"></i></a></li>
+                     {% endfor %}
                   </ul>
                 </div><!-- / .widget -->
               </div><!-- / .col-md-3 -->

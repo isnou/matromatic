@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import Home, MainContent, Footer, ContactUs, Service, OurProcess, SocialMedia, Client, Project
+from .models import Home, MainContent, ContactUs, Service, OurProcess, SocialMedia, Client, Project
 
 
 class HomeForm(ModelForm):
@@ -11,12 +11,6 @@ class HomeForm(ModelForm):
 class MainContentForm(ModelForm):
     class Meta:
         model = MainContent
-        fields = "__all__"
-
-
-class FooterForm(ModelForm):
-    class Meta:
-        model = Footer
         fields = "__all__"
 
 

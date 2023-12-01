@@ -120,13 +120,4 @@ class SocialMedia(models.Model):
 
 # ------------------------------ Footer -------------------------------- #
 
-class Footer(models.Model):
-    language = models.CharField(max_length=50, blank=True)
-    made_by = models.CharField(max_length=80, blank=True)
-    link = models.URLField(max_length=250)
 
-    class Meta:
-        verbose_name = "footer"
-
-    def __str__(self):
-        return self.language
