@@ -128,28 +128,20 @@
 
           <!-- white space -->
           <div class="ws-m"></div>
-
+            {% if values.display == R %}
+            {%for value in values %}
           <!-- Material right aligned - Item 1 -->
           <div class="col-md-12 no-gap ws-s ft-item ft-material right-align">
-            <div class="ft-content">
-              <h5>Easily Adjusti</h5>
-              <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius.</p>
+            <div class="{{value.icon}}">
+              <h5>{{value.name}}</h5>
+              <p>{{value.description}}</p>
             </div>
             <div class="ft-icon">
               <i class="fa fa-hand-peace-o"></i>
             </div>
           </div><!-- / .ft-item -->
-
-          <!-- Material right aligned - Item 2 -->
-          <div class="col-md-12 no-gap ws-s ft-item ft-material right-align">
-            <div class="ft-content">
-              <h5>100% Responsive</h5>
-              <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius.</p>
-            </div>
-            <div class="ft-icon">
-              <i class="fa fa-tv"></i>
-            </div>
-          </div><!-- / .ft-item -->
+            {%endfor%}
+          {% endif%}
         </div><!-- / .col-lg-4 -->
 
         <!-- Center Image -->

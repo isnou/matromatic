@@ -1,6 +1,6 @@
 from django.http import Http404
 from django.shortcuts import render
-from manager.models import Home, MainContent, ContactUs, Service, OurProcess, SocialMedia, Client, Project
+from manager.models import Home, MainContent, ContactUs, Service, OurProcess, SocialMedia, Client, Project, OurValues
 
 
 def home(request):
@@ -35,6 +35,11 @@ def home(request):
         raise Http404("Clients informations do not exist")
 
     try:
+        values = OurValues.objects.all()
+    except OurValues.DoesNotExist:
+        raise Http404("Our values informations do not exist")
+
+    try:
         projects = Project.objects.all()
     except Project.DoesNotExist:
         raise Http404("Projects informations do not exist")
@@ -58,6 +63,7 @@ def home(request):
         'services': services,
         'socials_media': socials_media,
         'contact_us': contact_us,
+        'values':values,
 
     }
 
