@@ -39,6 +39,11 @@ def home(request):
     except RightValue.DoesNotExist:
         raise Http404("Our values informations do not exist")
 
+
+    try:
+        left_values = LeftValue.objects.all()
+    except LeftValue.DoesNotExist:
+        raise Http404("Our values informations do not exist")
     try:
         projects = Project.objects.all()
     except Project.DoesNotExist:
@@ -64,6 +69,7 @@ def home(request):
         'socials_media': socials_media,
         'contact_us': contact_us,
         'right_values': right_values,
+        'left_values':left_values,
 
     }
 
