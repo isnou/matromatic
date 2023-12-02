@@ -132,12 +132,12 @@
             {%for value in values %}
           <!-- Material right aligned - Item 1 -->
           <div class="col-md-12 no-gap ws-s ft-item ft-material right-align">
-            <div class="{{value.icon}}">
+            <div class="ft-content">
               <h5>{{value.name}}</h5>
               <p>{{value.description}}</p>
             </div>
             <div class="ft-icon">
-              <i class="fa fa-hand-peace-o"></i>
+              <i class="{{value.icon}}"></i>
             </div>
           </div><!-- / .ft-item -->
             {%endfor%}
