@@ -155,9 +155,13 @@
           <div class="ws-m"></div>
           {% for value in left_values%}
           <div class="col-md-12 no-gap ws-s ft-item ft-material">
-            <i class="{{value.icon}}"></i>
-            <h5>{{value.name}}</h5>
-            <p>{{value.description}}</p>
+              <div class="ft-icon">
+                  <i class="{{value.icon}}"></i>
+              </div>
+            <div class="ft-content">
+                <h5>{{value.name}}</h5>
+                <p>{{value.description}}</p>
+            </div>
           </div><!-- / .ft-item -->
             {%endfor%}
 
