@@ -35,7 +35,7 @@ def home(request):
         raise Http404("Clients informations do not exist")
 
     try:
-        values = OurValues.objects.all()
+        right_values = OurValues.objects.get(display='R')
     except OurValues.DoesNotExist:
         raise Http404("Our values informations do not exist")
 
@@ -63,7 +63,7 @@ def home(request):
         'services': services,
         'socials_media': socials_media,
         'contact_us': contact_us,
-        'values':values,
+        'right_values': right_values,
 
     }
 
