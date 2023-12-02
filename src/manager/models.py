@@ -78,21 +78,30 @@ class Value(models.Model):
         return self.name
 
 
-class OurValues(models.Model):
-    DISPLAY_CHOICES = (
-        ('R', 'Right'),
-        ('L', 'Left'),
-    )
-    display = models.CharField(max_length=1, choices=DISPLAY_CHOICES )
-    value = models.ForeignKey(Value, on_delete=models.CASCADE)
+class RightValue(models.Model):
+    display = models.CharField(max_length=100, blank=True)
+    name = models.CharField(max_length=100, blank=True)
+    description = models.TextField(max_length=300, blank=True)
+    icon = models.CharField(max_length=70, blank=True)
 
     class Meta:
-        verbose_name = " our value"
+        verbose_name = "right value"
 
     def __str__(self):
-        return self.display
+        return self.name
 
 
+class LeftValue(models.Model):
+    display = models.CharField(max_length=100, blank=True)
+    name = models.CharField(max_length=100, blank=True)
+    description = models.TextField(max_length=300, blank=True)
+    icon = models.CharField(max_length=70, blank=True)
+
+    class Meta:
+        verbose_name = "left value"
+
+    def __str__(self):
+        return self.name
 
 
 # ------------------------------ Projects ----------------------------- #
