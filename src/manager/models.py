@@ -80,8 +80,8 @@ class Value(models.Model):
 
 class OurValues(models.Model):
     DISPLAY_CHOICES = (
-        ('R', 'Right'),
-        ('L', 'Left'),
+        ('Right', 'Right'),
+        ('Left', 'Left'),
     )
     display = models.CharField(max_length=1, choices=DISPLAY_CHOICES )
     value = models.ForeignKey(Value, on_delete=models.CASCADE)
