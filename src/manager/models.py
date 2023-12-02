@@ -64,6 +64,30 @@ class OurProcess(models.Model):
         return self.process_title
 
 
+# ------------------------------ our values -------------------------- #
+
+class Value(models.Model):
+    name = models.CharField(max_length=100, blank=True)
+    description = models.TextField(max_length=300, blank=True)
+    icon = models.CharField(max_length=70, blank=True)
+
+    def __str__(self):
+        return self.name
+
+
+class OurValues(models.Model):
+    RIGHT = "right"
+    LEFT = "left"
+    display_type = [(RIGHT, "right"), (LEFT, "left"), ]
+    value = models.ForeignKey(Value, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.display_type
+
+    class Meta:
+        ordering = ["display_type"]
+
+
 # ------------------------------ Projects ----------------------------- #
 class Project(models.Model):
     project_type = models.CharField(max_length=100, unique=True)
