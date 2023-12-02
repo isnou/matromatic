@@ -79,13 +79,15 @@ class Value(models.Model):
 
 
 class OurValues(models.Model):
-    RIGHT = "right"
-    LEFT = "left"
-    display_type = [(RIGHT, "right"), (LEFT, "left"), ]
+    DISPLAY_CHOICES = (
+        ('R', 'Right'),
+        ('L', 'Left'),
+    )
+    display = models.CharField(max_length=1, choices=DISPLAY_CHOICES )
     value = models.ForeignKey(Value, on_delete=models.CASCADE)
 
     class Meta:
-        verbose_name = "our value"
+        verbose_name = " our value"
 
     def __str__(self):
         return self.display_type
