@@ -71,6 +71,9 @@ class Value(models.Model):
     description = models.TextField(max_length=300, blank=True)
     icon = models.CharField(max_length=70, blank=True)
 
+    class Meta:
+        verbose_name = "value"
+
     def __str__(self):
         return self.name
 
@@ -81,11 +84,13 @@ class OurValues(models.Model):
     display_type = [(RIGHT, "right"), (LEFT, "left"), ]
     value = models.ForeignKey(Value, on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name = "our value"
+
     def __str__(self):
         return self.display_type
 
-    class Meta:
-        ordering = ["display_type"]
+
 
 
 # ------------------------------ Projects ----------------------------- #
