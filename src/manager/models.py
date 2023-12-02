@@ -90,7 +90,7 @@ class OurValues(models.Model):
         verbose_name = " our value"
 
     def __str__(self):
-        return self.display_type
+        return self.display
 
 
 
