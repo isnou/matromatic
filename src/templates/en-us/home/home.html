@@ -129,15 +129,14 @@
           <!-- white space -->
           <div class="ws-m"></div>
             {% if values.display == "R" %}
-            {%for value in values %}
           <!-- Material right aligned - Item 1 -->
           <div class="col-md-12 no-gap ws-s ft-item ft-material right-align">
             <div class="ft-content">
-              <h5>{{value.name}}</h5>
-              <p>{{value.description}}</p>
+              <h5>{{values.value.name}}</h5>
+              <p>{{values.value.description}}</p>
             </div>
             <div class="ft-icon">
-              <i class="{{value.icon}}"></i>
+              <i class="{{values.value.icon}}"></i>
             </div>
           </div><!-- / .ft-item -->
             {%endfor%}
