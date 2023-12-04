@@ -109,7 +109,7 @@ class LeftValue(models.Model):
 # ------------------------------ Projects ----------------------------- #
 class Project(models.Model):
     project_type = models.CharField(max_length=100,unique=False)
-    project_name = models.CharField(max_length=50, unique=True)
+    project_name = models.CharField(max_length=50, unique=False)
     project_photo = models.ImageField(upload_to='projects/project_photo', null=True, blank=True)
 
     class Meta:
