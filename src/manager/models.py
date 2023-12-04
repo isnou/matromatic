@@ -24,9 +24,11 @@ class MainContent(models.Model):
     language = models.CharField(max_length=50, blank=True)
     about_us_description = models.TextField(max_length=800, blank=True)
     about_us_photo = models.ImageField(upload_to='about_us/about_us_photo', blank=True)
+    youtube_link = models.URLField(max_length=250)
     our_service_description = models.TextField(max_length=500, blank=True)
     our_process_description = models.TextField(max_length=500, blank=True)
     why_us_description = models.TextField(max_length=500, blank=True)
+    why_us_photo = models.ImageField(upload_to='why_us/why_us_photo', blank=True)
     our_projects_description = models.TextField(max_length=500, blank=True)
     our_client_description = models.TextField(max_length=500, blank=True)
     contact_description = models.TextField(max_length=500, blank=True)
@@ -41,7 +43,7 @@ class MainContent(models.Model):
 # ------------------------------ Service ------------------------------- #
 class Service(models.Model):
     service_title = models.CharField(max_length=70, blank=True)
-    service_description = models.TextField(max_length=200, blank=True)
+    service_description = models.TextField(max_length=500, blank=True)
     icon = models.CharField(max_length=70, blank=True)
 
     class Meta:
