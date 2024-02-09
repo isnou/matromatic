@@ -68,18 +68,6 @@ class OurProcess(models.Model):
 
 # ------------------------------ our values -------------------------- #
 
-class Value(models.Model):
-    name = models.CharField(max_length=100, blank=True)
-    description = models.TextField(max_length=300, blank=True)
-    icon = models.CharField(max_length=70, blank=True)
-
-    class Meta:
-        verbose_name = "value"
-
-    def __str__(self):
-        return self.name
-
-
 class RightValue(models.Model):
     display = models.CharField(max_length=100, blank=True)
     name = models.CharField(max_length=100, blank=True)
