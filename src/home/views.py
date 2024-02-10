@@ -1,6 +1,10 @@
-from django.http import Http404
-from django.shortcuts import render
-from manager.models import Home, MainContent, ContactUs, Service, OurProcess, SocialMedia, Client, Project, RightValue,LeftValue
+from django.http import Http404, HttpResponse
+from django.shortcuts import render, redirect
+from manager.models import Home, MainContent, ContactUs, Service, OurProcess, SocialMedia, Client, Project, RightValue, \
+    LeftValue
+
+from django.core.mail import BadHeaderError, EmailMessage
+from django.conf import settings
 
 
 def home(request):
@@ -39,7 +43,6 @@ def home(request):
     except RightValue.DoesNotExist:
         raise Http404("Our values informations do not exist")
 
-
     try:
         left_values = LeftValue.objects.all()
     except LeftValue.DoesNotExist:
@@ -69,8 +72,25 @@ def home(request):
         'socials_media': socials_media,
         'contact_us': contact_us,
         'right_values': right_values,
-        'left_values':left_values,
+        'left_values': left_values,
 
     }
 
     return render(request, url, context)
+
+
+def contact(request):
+    if request.method == "POST":
+        message_name = request.POST['message-name']
+        message_email = request.POST['message-email']
+        message = request.POST['message']
+        # send an email
+        from_email = '{name} <{email}>'.format(name=message_name, email=message_email)
+        recipient_list = [settings.EMAIL_HOST_USER]
+        email_message = EmailMessage(message_name, message, from_email, recipient_list, reply_to=[message_email])
+        try:
+            email_message.send()
+        except BadHeaderError:
+            return HttpResponse('Un en-tête non valide a été détecté.')
+
+    return redirect('home')

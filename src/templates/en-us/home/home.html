@@ -235,9 +235,9 @@
               <div id="map-canvas" class="gmap map-boxed" style="position: relative; overflow: hidden;">
                   <div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(248, 248, 248);">
                   <div class="gm-err-container">
-                  <div class="gm-err-content">
-                  <div class="gm-err-icon"></div>
-                  </div>
+                     <div class="gm-err-content">
+                        <div class="gm-err-icon"></div>
+                     </div>
                   </div>
                   </div>
               </div>
@@ -282,20 +282,20 @@
 
                   <!-- Contact Form -->
                   <div class="row">
-                      <form action="assets/contact-form/contact-form.php" method="POST" id="contact-form-1" class="form-ajax">
+                      <form action="{% url 'contact' %}" method="POST" id="contact-form-1" class="form-ajax">
+                           {%csrf_token%}
                           <div class="col-md-offset-2 col-md-4 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
-
                               <!-- Name -->
                               <div class="form-group">
-                                  <input type="text" name="name" id="name-contact-1" class="form-control validate-locally" placeholder="Enterez votre nom ">
-                                  <label for="name-contact-1">Nom</label>
+                                  <input type="text" name="message-name" id="name-contact" class="form-control validate-locally" placeholder="Enterez votre nom ">
+                                  <label for="name-contact">Nom</label>
                                   <span class="pull-right alert-error"></span>
                               </div>
 
                               <!-- Email -->
                               <div class="form-group">
-                                  <input type="email" name="email" id="email-contact-1" class="form-control validate-locally" placeholder="Enterez votre email">
-                                  <label for="email-contact-1">Email</label>
+                                  <input type="email" name="message-email" id="email-contact" class="form-control validate-locally" placeholder="Enterez votre email">
+                                  <label for="email-contact">Email</label>
                                   <span class="pull-right alert-error"></span>
                               </div>
 
@@ -305,8 +305,8 @@
 
                               <!-- Message -->
                               <div class="form-group">
-                                  <textarea name="message" id="message-contact-1" class="form-control" rows="5" placeholder="Votre Message"></textarea>
-                                  <label for="message-contact-1">Message</label>
+                                  <textarea name="message" id="message-contact" class="form-control" rows="5" placeholder="Votre Message"></textarea>
+                                  <label for="message-contact">Message</label>
                               </div>
                               <div>
                                   <input type="submit" class="btn pull-right" value="Envoyer">
