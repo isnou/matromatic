@@ -287,14 +287,14 @@
                           <div class="col-md-offset-2 col-md-4 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
                               <!-- Name -->
                               <div class="form-group">
-                                  <input type="text" name="message-name" id="name-contact" class="form-control validate-locally" placeholder="Enterez votre nom "required>
+                                  <input type="text" for="name-contact" name="message-name" id="name-contact" class="form-control validate-locally" placeholder="Enterez votre nom "required>
                                   <label for="name-contact">Nom</label>
                                   <span class="pull-right alert-error"></span>
                               </div>
 
                               <!-- Email -->
                               <div class="form-group">
-                                  <input type="email" name="message-email" id="email-contact" class="form-control validate-locally" placeholder="Enterez votre email" required>
+                                  <input type="email" for="email-contact" name="message-email" id="email-contact" class="form-control validate-locally" placeholder="Enterez votre email" required>
                                   <label for="email-contact">Email</label>
                                   <span class="pull-right alert-error"></span>
                               </div>
@@ -305,8 +305,8 @@
 
                               <!-- Message -->
                               <div class="form-group">
-                                  <textarea name="message" id="message-contact" class="form-control" rows="5" placeholder="Votre Message"required></textarea>
-                                  <label for="message-contact">Message</label>
+                                  <textarea for="message-text" name="message" id="message-text" class="form-control" rows="6" placeholder="Votre Message"required></textarea>
+                                  <label for="message-text">Message</label>
                               </div>
                               <div>
                                   <input type="submit" class="btn pull-right" value="Envoyer">
