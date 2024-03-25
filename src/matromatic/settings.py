@@ -76,8 +76,8 @@ WSGI_APPLICATION = 'matromatic.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'matrodb',
-        'USER': 'matro_us',
+        'NAME': 'matro_db',
+        'USER': 'matrous',
         'PASSWORD': 'Bouderbala1059',
         'HOST': 'localhost',
         'PORT': '3306',
