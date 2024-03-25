@@ -19,12 +19,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0y(dj*jiwsr9z_$l@g6)gvx%$@e&)&3u+@(yo)h5!ry2$g&6qw'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['89.40.4.102']
 
 # Application definition
 
@@ -76,9 +76,9 @@ WSGI_APPLICATION = 'matromatic.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'matrodb',
+        'NAME': 'matro_db',
         'USER': 'matro_us',
-        'PASSWORD': 'Bouderbala6931',
+        'PASSWORD': 'Bouderbala1059',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -126,7 +126,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = '587'
-EMAIL_HOST_USER = 'matro.011.mail@gmail.com'
-EMAIL_HOST_PASSWORD = 'asco djos fnrd anrp'
+EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+EMAIL_PORT = 587
 EMAIL_USE_TLS = True
